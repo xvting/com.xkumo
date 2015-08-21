@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title='基础值域码描述' id='listCodemainItem' />
+	<Model>
+		<field title='分类ID' search='true' >categoryid</field>
+		<field title='值域ID' search='true'  key='true' >itemid</field>
+		<field title='值域名称' search='true' >itemname</field>
+		<field title='值域编码' search='true' >itemcode</field>
+		<field title='参数1名称'  >param1name</field>
+		<field title='参数1有效'  >param1enable</field>
+		<field title='参数2名称'  >param2name</field>
+		<field title='参数2有效'  >param2enable</field>
+		<field title='参数3名称'  >param3name</field>
+		<field title='参数3有效'  >param3enable</field>
+		<field title='参数4名称'  >param4name</field>
+		<field title='参数4有效'  >param4enable</field>
+		<field title='参数5名称'  >param5name</field>
+		<field title='参数5有效'  >param5enable</field>
+		<field title='说明'  >remark</field>
+	</Model>
+	<Store ProxyUrl='listMainItem.action'/>
+	<Add RequestUrl='addMainItem.action'/>
+	<Edit RequestUrl='updateMainItem.action'/>
+	<Delete RequestUrl='deleteMainItemForID.action'></Delete>
+	<DeleteAll RequestUrl='deleteMainItem.action'/>
+</root>

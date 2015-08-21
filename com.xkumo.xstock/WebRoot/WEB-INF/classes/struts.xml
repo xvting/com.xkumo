@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<!-- index -->
+	<package name="index" extends="struts-default">
+		<action name="index" class="com.xkumo.xstock.index.IndexAction" method="index">
+			<result name="success">index.jsp</result>
+		</action>
+	</package>
+	
+	<package name="firstAction" namespace="/firstPage" extends="struts-default">
+          <action name="toFirstAction" class="com.xkumo.xstock.data.action.firstAction" method="toFirstJspPage">
+              <result name="success">/Jsp/firstAction.jsp</result>
+          </action>
+    </package>
+    
+    <package name="stockAction" namespace="/stock" extends="struts-default">
+          <action name="toListStockPage" class="com.xkumo.xstock.stock.action.StockAction" method="toListStockPage">
+              <result name="success">/Jsp/Stock/listStock.jsp</result>
+          </action>
+          <action name="toListStockExchangePage" class="com.xkumo.xstock.stock.action.StockExchangeAction" method="toListStockExchangePage">
+              <result name="success">/Jsp/Stock/listStockExchange.jsp</result>
+          </action>
+    </package>
+
+    <package name="stockJson"  extends="json-default">
+    	<action name="listStock" class="com.xkumo.xstock.stock.action.StockAction"  method="listStock">
+			<result type="json">
+				<param name="root">listStockMap</param>
+			</result>
+		</action>
+		<action name="refreshStockAll" class="com.xkumo.xstock.stock.action.StockAction"  method="refreshStockAll">
+			<result type="json">
+				<param name="root">refreshStockAllMap</param>
+			</result>
+		</action>
+		
+
+		<action name="deleteStockAll" class="com.xkumo.xstock.stock.action.StockAction"  method="deleteStockAll">
+			<result type="json">
+				<param name="root">deleteStockAllMap</param>
+			</result>
+		</action>
+		
+    	<action name="listStockExchange" class="com.xkumo.xstock.stock.action.StockExchangeAction"  method="listStockExchange">
+			<result type="json">
+				<param name="root">listStockExchangeMap</param>
+			</result>
+		</action>
+    </package>
+
+	 <package name="todoAction" namespace="/todo" extends="struts-default">
+          <action name="toListTodoPage" class="com.xkumo.xstock.todo.action.TodoAction" method="toListTodoPage">
+              <result name="success">/Jsp/Todo/listTodo.jsp</result>
+          </action>
+          <action name="toListTodoGroupPage" class="com.xkumo.xstock.todo.action.TodoGroupAction" method="toListTodoGroupPage">
+              <result name="success">/Jsp/Todo/listGroupTodo.jsp</result>
+          </action>
+    </package>
+    
+    <package name="todoJson"  extends="json-default">
+    	<action name="listTodo" class="com.xkumo.xstock.todo.action.TodoAction"  method="listTodo">
+			<result type="json">
+				<param name="root">listTodoMap</param>
+			</result>
+		</action>
+		<action name="addTodo" class="com.xkumo.xstock.todo.action.TodoAction"  method="addTodo">
+			<result type="json">
+				<param name="root">addTodoMap</param>
+			</result>
+		</action>
+		<action name="updateTodo" class="com.xkumo.xstock.todo.action.TodoAction"  method="updateTodo">
+			<result type="json">
+				<param name="root">updateTodoMap</param>
+			</result>
+		</action>
+		<action name="deleteTodoForID" class="com.xkumo.xstock.todo.action.TodoAction"  method="deleteTodoForID">
+			<result type="json">
+				<param name="root">deleteTodoForIDMap</param>
+			</result>
+		</action>
+		<action name="deleteTodo" class="com.xkumo.xstock.todo.action.TodoAction"  method="deleteTodo">
+			<result type="json">
+				<param name="root">deleteTodoMap</param>
+			</result>
+		</action>
+		
+		<action name="listTodoGroup" class="com.xkumo.xstock.todo.action.TodoGroupAction"  method="listTodoGroup">
+			<result type="json">
+				<param name="root">listTodoGroupMap</param>
+			</result>
+		</action>
+		<action name="addTodoGroup" class="com.xkumo.xstock.todo.action.TodoGroupAction"  method="addTodoGroup">
+			<result type="json">
+				<param name="root">addTodoGroupMap</param>
+			</result>
+		</action>
+		<action name="updateTodoGroup" class="com.xkumo.xstock.todo.action.TodoGroupAction"  method="updateTodoGroup">
+			<result type="json">
+				<param name="root">updateTodoGroupMap</param>
+			</result>
+		</action>
+		<action name="deleteTodoGroupForID" class="com.xkumo.xstock.todo.action.TodoGroupAction"  method="deleteTodoGroupForID">
+			<result type="json">
+				<param name="root">deleteTodoGroupForIDMap</param>
+			</result>
+		</action>
+		<action name="deleteTodoGroup" class="com.xkumo.xstock.todo.action.TodoGroupAction"  method="deleteTodoGroup">
+			<result type="json">
+				<param name="root">deleteTodoGroupMap</param>
+			</result>
+		</action>
+    </package>
+	
+	<package name="sinaAction" namespace="/sina" extends="struts-default">
+          <action name="toListStockDataSinaPage" class="com.xkumo.xstock.sina.action.StockDataSinaAction" method="toListStockDataSinaPage">
+              <result name="success">/Jsp/Sina/listStockDataSina.jsp</result>
+          </action>
+          <action name="toListStockDataSinaMAPage" class="com.xkumo.xstock.sina.action.StockDataSinaMAAction" method="toListStockDataSinaMAPage">
+              <result name="success">/Jsp/Sina/listStockDataSinaMA.jsp</result>
+          </action>
+    </package>
+    
+    <package name="sinaJson"  extends="json-default">
+    	<action name="listStockDataSina" class="com.xkumo.xstock.sina.action.StockDataSinaAction"  method="listStockDataSina">
+			<result type="json">
+				<param name="root">listStockDataSinaMap</param>
+			</result>
+		</action>
+		<action name="updateStockDataSinaByDay" class="com.xkumo.xstock.sina.action.StockDataSinaAction"  method="updateStockDataSinaByDay">
+			<result type="json">
+				<param name="root">updateStockDataSinaByDayMap</param>
+			</result>
+		</action>
+				<action name="deleteStockDataSinaForID" class="com.xkumo.xstock.sina.action.StockDataSinaAction"  method="deleteStockDataSinaForID">
+			<result type="json">
+				<param name="root">deleteStockDataSinaForIDMap</param>
+			</result>
+		</action>
+		<action name="deleteStockDataSinaAll" class="com.xkumo.xstock.sina.action.StockDataSinaAction"  method="deleteStockDataSinaAll">
+			<result type="json">
+				<param name="root">deleteStockDataSinaAllMap</param>
+			</result>
+		</action>
+		
+		<action name="updateStockDataSinaMAForID" class="com.xkumo.xstock.sina.action.StockDataSinaAction"  method="updateStockDataSinaMAForID">
+			<result type="json">
+				<param name="root">updateStockDataSinaMAForIDMap</param>
+			</result>
+		</action>
+		
+		<action name="updateStockDataSinaAllMA" class="com.xkumo.xstock.sina.action.StockDataSinaAction"  method="updateStockDataSinaAllMA">
+			<result type="json">
+				<param name="root">updateStockDataSinaAllMAMap</param>
+			</result>
+		</action>
+	</package>
+	
+	<package name="yahooAction" namespace="/yahoo" extends="struts-default">
+          <action name="toListStockDataYahooPage" class="com.xkumo.xstock.yahoo.action.StockDataYahooAction" method="toListStockDataYahooPage">
+              <result name="success">/Jsp/Yahoo/listStockDataYahoo.jsp</result>
+          </action>
+          <action name="toListStockDataYahooFlagPage" class="com.xkumo.xstock.yahoo.action.StockDataYahooFlagAction" method="toListStockDataYahooFlagPage">
+              <result name="success">/Jsp/Yahoo/listStockDataYahooFlag.jsp</result>
+          </action>
+    </package>
+    <package name="yahooJson"  extends="json-default">
+    	<action name="updateStockDataYahooByDay" class="com.xkumo.xstock.yahoo.action.StockDataYahooAction"  method="updateStockDataYahooByDay">
+			<result type="json">
+				<param name="root">updateStockDataYahooByDayMap</param>
+			</result>
+		</action>
+		<action name="listStockDataYahoo" class="com.xkumo.xstock.yahoo.action.StockDataYahooAction"  method="listStockDataYahoo">
+			<result type="json">
+				<param name="root">listStockDataYahooMap</param>
+			</result>
+		</action>
+		<action name="deleteStockDataYahooAll" class="com.xkumo.xstock.yahoo.action.StockDataYahooAction"  method="deleteStockDataYahooAll">
+			<result type="json">
+				<param name="root">deleteStockDataYahooAllMap</param>
+			</result>
+		</action>
+		
+		<action name="listStockDataYahooFlag" class="com.xkumo.xstock.yahoo.action.StockDataYahooFlagAction"  method="listStockDataYahooFlag">
+			<result type="json">
+				<param name="root">listStockDataYahooFlagMap</param>
+			</result>
+		</action>
+		<action name="updateStockInfoYahooFlag" class="com.xkumo.xstock.yahoo.action.StockDataYahooFlagAction"  method="updateStockInfoYahooFlag">
+			<result type="json">
+				<param name="root">updateStockInfoYahooFlagMap</param>
+			</result>
+		</action>
+		<action name="deleteStockDataYahooFlagAll" class="com.xkumo.xstock.yahoo.action.StockDataYahooFlagAction"  method="deleteStockDataYahooFlagAll">
+			<result type="json">
+				<param name="root">deleteStockDataYahooFlagAllMap</param>
+			</result>
+		</action>
+    </package>
+    
+    <package name="taskAction" namespace="/task" extends="struts-default">
+          <action name="toListTaskPage" class="com.xkumo.xstock.task.action.TaskAction" method="toListTaskPage">
+              <result name="success">/Jsp/Task/listTask.jsp</result>
+          </action>
+          <action name="toListTaskLogPage" class="com.xkumo.xstock.task.action.TaskLogAction" method="toListTaskLogPage">
+              <result name="success">/Jsp/Task/listTaskLog.jsp</result>
+          </action>
+          
+    </package>
+    
+    <package name="taskJson"  extends="json-default">
+    	<action name="listTask" class="com.xkumo.xstock.task.action.TaskAction"  method="listTask">
+			<result type="json">
+				<param name="root">listTaskMap</param>
+			</result>
+		</action>
+		<action name="executeTaskForID" class="com.xkumo.xstock.task.action.TaskAction"  method="executeTaskForID">
+			<result type="json">
+				<param name="root">executeTaskForIDMap</param>
+			</result>
+		</action>
+		<action name="terminateTaskForID" class="com.xkumo.xstock.task.action.TaskAction"  method="terminateTaskForID">
+			<result type="json">
+				<param name="root">terminateTaskForIDMap</param>
+			</result>
+		</action>
+    	<action name="listTaskLog" class="com.xkumo.xstock.task.action.TaskLogAction"  method="listTaskLog">
+			<result type="json">
+				<param name="root">listTaskLogMap</param>
+			</result>
+		</action>
+		
+	</package>
+	
+	
+	<package name="keywordAction" namespace="/keyword" extends="struts-default">
+          <action name="toListKeywordPage" class="com.xkumo.xstock.keyword.action.KeywordAction" method="toListKeywordPage">
+              <result name="success">/Jsp/Keyword/listKeyword.jsp</result>
+          </action>
+    </package>
+    <package name="keywordJson"  extends="json-default">
+    	<action name="listKeyword" class="com.xkumo.xstock.keyword.action.KeywordAction"  method="listKeyword">
+			<result type="json">
+				<param name="root">listKeywordMap</param>
+			</result>
+		</action>
+		<action name="addKeyword" class="com.xkumo.xstock.keyword.action.KeywordAction"  method="addKeyword">
+			<result type="json">
+				<param name="root">addKeywordMap</param>
+			</result>
+		</action>
+		<action name="deleteKeyword" class="com.xkumo.xstock.keyword.action.KeywordAction"  method="deleteKeyword">
+			<result type="json">
+				<param name="root">deleteKeywordMap</param>
+			</result>
+		</action>
+	</package>
+	
+	<package name="keywordLinkAction" namespace="/keyword" extends="struts-default">
+          <action name="toListKeywordLinkPage" class="com.xkumo.xstock.keyword.action.KeywordLinkAction" method="toListKeywordLinkPage">
+              <result name="success">/Jsp/Keyword/listKeywordLink.jsp</result>
+          </action>
+    </package>
+    <package name="keywordLinkJson"  extends="json-default">
+    	<action name="listKeywordLink" class="com.xkumo.xstock.keyword.action.KeywordLinkAction"  method="listKeywordLink">
+			<result type="json">
+				<param name="root">listKeywordLinkMap</param>
+			</result>
+		</action>
+		<action name="addKeywordLink" class="com.xkumo.xstock.keyword.action.KeywordLinkAction"  method="addKeywordLink">
+			<result type="json">
+				<param name="root">addKeywordLinkMap</param>
+			</result>
+		</action>
+		<action name="deleteKeywordLink" class="com.xkumo.xstock.keyword.action.KeywordLinkAction"  method="deleteKeywordLink">
+			<result type="json">
+				<param name="root">deleteKeywordLinkMap</param>
+			</result>
+		</action>
+	</package>
+
+</struts>    

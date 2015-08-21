@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.datacollector.xstock.xkumo.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="StockServiceService" targetNamespace="http://service.datacollector.xstock.xkumo.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:7088/XStockDataCollector/StockServicePort?xsd=1" namespace="http://service.datacollector.xstock.xkumo.com/" />
+    </xsd:schema>
+  </types>
+  <message name="getData">
+    <part name="parameters" element="tns:getData" />
+  </message>
+  <message name="getDataResponse">
+    <part name="parameters" element="tns:getDataResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <portType name="StockServiceDelegate">
+    <operation name="getData">
+      <input message="tns:getData" />
+      <output message="tns:getDataResponse" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+  </portType>
+  <binding name="StockServicePortBinding" type="tns:StockServiceDelegate">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getData">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="StockServiceService">
+    <port name="StockServicePort" binding="tns:StockServicePortBinding">
+      <soap:address location="http://localhost:7088/XStockDataCollector/StockServicePort" />
+    </port>
+  </service>
+</definitions>

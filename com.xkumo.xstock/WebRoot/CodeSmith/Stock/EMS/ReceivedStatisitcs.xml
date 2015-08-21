@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title='接收统计' id='ReceivedStatisitcs' />
+	<Model>
+		<field title='统计单位' search='true'  >timetype</field>
+		<field title='来源' search='true' >source</field>
+		<field title='开始日期' search='true' >startdate</field>
+		<field title='结束日期' search='true'>enddate</field>
+	</Model>
+	<Store ProxyUrl='listTimeTaskPageLog.action'/>
+	<Add RequestUrl='AddRequestUrl.textAction'/>
+	<Edit RequestUrl='EditRequestUrl.textAction'/>
+	<Delete RequestUrl='deleteTimeTaskForUUID.action'></Delete>
+	<DeleteAll RequestUrl='deleteTimeTask.action'/>
+</root>

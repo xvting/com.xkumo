@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title='股票' id='listStock' />
+	<Model>
+		<field title='股票编号' key='true' search='true' >stockcode</field>
+		<field title='股票名称' search='true' >stockname</field>
+		<field title='股票交易所编号' key='true' search='true'>stockexchangecode</field>
+		<field title='描述' >stockremark</field>
+	</Model>
+	<Store ProxyUrl='listStock.action'/>
+	<Add RequestUrl='addStock.action'/>
+	<Edit RequestUrl='updateStock.action'/>
+	<Delete RequestUrl='deleteStock.action'></Delete>
+	<DeleteAll RequestUrl='deleteStockAll.action'/>
+</root>

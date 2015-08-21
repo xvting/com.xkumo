@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title='Keyword' id='listKeyword' />
+	<Model>
+		<field title='序列号' key='true' dataType='int'>seq</field>
+		<field title='编号' search='true' dataType='string'>code</field>
+		<field title='关键词' search='true' dataType='string'>keyword</field>
+	</Model>
+	<Store ProxyUrl='listKeyword.action'/>
+	<Add RequestUrl='addKeyword.action'/>
+	<Edit RequestUrl='updateKeyword.action'/>
+	<Delete RequestUrl='deleteKeywordForID.action'></Delete>
+	<DeleteAll RequestUrl='deleteKeyword.action'/>
+</root>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title="药理大分类" id="listDcmsMedicinepharmajorcategory"/>
+	<Model>
+		<field title="所属分类id" search="true">categoryid</field>
+		<field title="药理大分类id" key='true'>majorcategoryid</field>
+		<field title="药理大分类编号" search="true">majorcategorycode</field>
+		<field title="药理大分类名称" search="true">majorcategoryname</field>
+		<field title="备注">remark</field>
+	</Model>
+	<Store ProxyUrl="listDcmsMedicinepharmajorcategory.action"/>
+	<Add RequestUrl="addDcmsMedicinepharmajorcategory.action"/>
+	<Edit RequestUrl="updateDcmsMedicinepharmajorcategory.action"/>
+	<Delete RequestUrl="deleteDcmsMedicinepharmajorcategoryForID.action"/>
+	<DeleteAll RequestUrl="deleteDcmsMedicinepharmajorcategory.action"/>
+</root>

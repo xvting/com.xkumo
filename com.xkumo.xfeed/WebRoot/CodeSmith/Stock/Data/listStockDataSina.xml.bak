@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title='新浪即时数据' id='StockDataSina' />
+	<Model>
+		<field title='流水号' key='true' dataType='int' >sinaseq</field>
+		<field title='股票代码' search='true' dataType='string' >stockcode</field>
+		<field title='股票名称' search='true' dataType='string' >stockname</field>
+		<field title='所属交易所编号' dataType='string' >stockexchangecode</field>
+		<field title='开盘价' dataType='string'>openprice</field>
+		<field title='昨日收盘价' dataType='string'>lastcloseprice</field>
+		<field title='当前价格' dataType='string'>currentprice</field>
+		<field title='今日最高价' dataType='string'>topprice</field>
+		<field title='今日最低价' dataType='string'>bottomprice</field>
+		<field title='竞买价' dataType='string'>buyprice</field>
+		<field title='竞卖价' dataType='string'>sellprice</field>
+		<field title='成交金额' dataType='string'>transactionamount</field>
+		<field title='成交股票数' dataType='string'>transactionnumber</field>
+		<field title='买一报价' dataType='string'>buy1price</field>
+		<field title='买一数量' dataType='string'>buy1number</field>
+		<field title='买二报价' dataType='string'>buy2price</field>
+		<field title='买二数量' dataType='string'>buy2number</field>
+		<field title='买三报价' dataType='string'>buy3price</field>
+		<field title='买三数量' dataType='string'>buy3number</field>
+		<field title='买四报价' dataType='string'>buy4price</field>
+		<field title='买四数量' dataType='string'>buy4number</field>
+		<field title='买五报价' dataType='string'>buy5price</field>
+		<field title='买五数量' dataType='string'>buy5number</field>
+		<field title='卖一报价' dataType='string'>sell1price</field>
+		<field title='卖一数量' dataType='string'>sell1number</field>
+		<field title='卖二报价' dataType='string'>sell2price</field>
+		<field title='卖二数量' dataType='string'>sel12number</field>
+		<field title='卖三报价' dataType='string'>sell3price</field>
+		<field title='卖三数量' dataType='string'>sell3number</field>
+		<field title='卖四报价' dataType='string'>sell4price</field>
+		<field title='卖四数量' dataType='string'>sell4number</field>
+		<field title='卖五报价' dataType='string'>sell5price</field>
+		<field title='卖五数量' dataType='string'>sell5number</field>
+		<field title='数据日期' dataType='string'>dataday</field>
+		<field title='数据时间' dataType='string'>datatime</field>
+	</Model>
+	<Store ProxyUrl='StoreProxyUrl.textAction'/>
+	<Add RequestUrl='AddRequestUrl.textAction'/>
+	<Edit RequestUrl='EditRequestUrl.textAction'/>
+	<Delete RequestUrl='DeleteRequestUrl.textAction'></Delete>
+	<DeleteAll RequestUrl='DeleteAllRequestUrl.textAction'/>
+</root>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title='KeywordLink' id='listKeywordLink' />
+	<Model>
+		<field title='序列号' key='true' dataType='int'>seq</field>
+		<field title='关键词编号' search='true' dataType='string'>keywordcode</field>
+		<field title='股票编号' search='true' dataType='string'>stockcode</field>
+		<field title='股票交易所编号' search='true' dataType='string'>stockexchangecode</field>
+	</Model>
+	<Store ProxyUrl='listKeywordLink.action'/>
+	<Add RequestUrl='addKeywordLink.action'/>
+	<Edit RequestUrl='updateKeywordLink.action'/>
+	<Delete RequestUrl='deleteKeywordLinkForID.action'></Delete>
+	<DeleteAll RequestUrl='deleteKeywordLink.action'/>
+</root>

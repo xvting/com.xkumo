@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title='StockDataYahooFlag' id='listStockDataYahooFlag' />
+	<Model>
+		<field title='序列号' key='true' dataType='int'>seq</field>
+		<field title='股票编号' search='true' dataType='string'>stockcode</field>
+		<field title='股票名称' search='true' dataType='string'>stockname</field>
+		<field title='股票交易所编号' dataType='string'>stockexchangecode</field>
+		<field title='数据下载次数' search='true' dataType='string'>dataloadcount</field>
+	</Model>
+	<Store ProxyUrl='listStockDataYahooFlag.action'/>
+	<Add RequestUrl='addStockDataYahooFlag.action'/>
+	<Edit RequestUrl='updateStockDataYahooFlag.action'/>
+	<Delete RequestUrl='deleteStockDataYahooFlagForID.action'></Delete>
+	<DeleteAll RequestUrl='deleteStockDataYahooFlag.action'/>
+</root>

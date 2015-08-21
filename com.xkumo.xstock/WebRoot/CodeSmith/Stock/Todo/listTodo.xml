@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title='Todo' id='listTodo' />
+	<Model>
+		<field title='序列号' key='true' >todoseq</field>
+		<field title='名称' search='true' >todoname</field>
+		<field title='内容' >todoremark</field>
+		<field title='所属组' search='true' >todogroupid</field>
+		<field title='级别' search='true' >todolevel</field>
+		<field title='已解决' search='true' >isresolved</field>
+		<field title='计划解决时间' >planresolvedtime</field>
+		<field title='实际解决时间' >actualresolvedtime</field>
+	</Model>
+	<Store ProxyUrl='listTodo.action'/>
+	<Add RequestUrl='addTodo.action'/>
+	<Edit RequestUrl='updateTodo.action'/>
+	<Delete RequestUrl='deleteTodoForID.action'></Delete>
+	<DeleteAll RequestUrl='deleteTodo.action'/>
+</root>

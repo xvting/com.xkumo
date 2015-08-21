@@ -1,0 +1,951 @@
+﻿<%-- 
+Name:
+Author: 
+Description: 
+--%>
+<%@ Template Language="C#" TargetLanguage="Text" %>
+<%@ Property Name="SampleStringProperty" Default="SomeValue" Type="System.String" %>
+<%@ Property Name="SampleBooleanProperty" Default="True" Type="System.Boolean" %>
+<%@ XmlProperty Name="TargetFile" Optional="False" Category="Data" Description="XML file to iterate." %>
+<%@ Assembly Name="System.Xml" %>
+<%@ Import Namespace="System.Xml" %>
+<%@ Assembly Name="mscorlib" %>
+<%@ Import Namespace="System.Collections" %>
+
+<%@ Property Name="leftRef" Default="<%" Type="System.String" %>
+<%@ Property Name="rightRef" Default="%>" Type="System.String" %>
+
+<!-- 
+页面整体说明区域
+
+创建时间：<%= System.DateTime.Now.ToString() %>
+生成配置：<%=GetXMLSetting() %>
+ -->
+
+<%=leftRef%>@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%> 
+<%=leftRef%>
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+String extjsPath = "http://"+request.getServerName()+":9091";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=leftRef%>=basePath%>">
+    
+    <title><%=GetPageTitle()%></title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<link rel="stylesheet" href="<%=leftRef%>=extjsPath%>/resources/ext-theme-classic/ext-theme-classic-all.css">
+    <script src="<%=leftRef%>=extjsPath%>/ext-all.js"></script>
+	<script src="<%=leftRef%>=extjsPath%>/locale/ext-lang-zh_CN.js"></script>
+  </head>
+  
+  <body>
+<script type="text/javascript">
+
+/*----------------- 图片资源配置区域 -----------------*/
+var iconSearch = "<%=leftRef%>=extjsPath%>/exticons/cog_edit.png";
+var iconView = "<%=leftRef%>=extjsPath%>/exticons/application/application_view_detail.png";
+var iconAdd = "<%=leftRef%>=extjsPath%>/exticons/arrow/add.png";
+var iconEdit = "<%=leftRef%>=extjsPath%>/exticons/application/application_form_edit.png";
+var iconDelete = "<%=leftRef%>=extjsPath%>/exticons/delete.png";
+var iconDeleteAll = "<%=leftRef%>=extjsPath%>/exticons/table/table_delete.png";
+var iconPlay = "<%=leftRef%>=extjsPath%>/exticons/control/control_play_blue.png";
+var iconPause = "<%=leftRef%>=extjsPath%>/exticons/control/control_pause_blue.png";
+
+
+/*----------------- 页面变量配置区域 -----------------*/
+var itemsPerPage = 20;			//Grid的每页显示行数
+var gridHeight = 475;	//Grid的高度
+
+
+/*----------------- 定义Model区域 -----------------*/
+//1.要添加Model的idProperty， 如：idProperty : 'dataIdentity'
+//2.要设定数据类型，默认值
+
+/*
+数据字段名
+*/
+Ext.define('<%=GetPageID()%>.baseModel', {
+    extend: 'Ext.data.Model',
+    requires: [
+        'Ext.data.Field'
+    ],
+
+    fields: [
+<%=GetModelFields()%>
+    ],
+   
+    idProperty : '<%=GetModelKeyName()%>'
+});
+
+/*----------------- 定义数据Store区域 -----------------*/
+var thisStore = Ext.create('Ext.data.Store', {
+   	model:'<%=GetPageID()%>.baseModel',
+	autoLoad:false,
+	pageSize:itemsPerPage,
+	proxy:{
+		type:'ajax',
+		url:'<%=GetStoreProxyUrl()%>',
+		reader:{
+			type:'json',
+			root:'root',
+			totalProperty: 'total'
+		}
+	}
+});
+
+thisStore.on("beforeload",function(store, operation, eOpts)
+	{
+		Ext.apply(store.proxy.extraParams,
+			{
+<%=GetStoreProxyExtraParams()%>
+			}
+		);
+	}
+
+);
+
+/*----------------- 创建检索工具条 -----------------*/
+//1.需要修改对应数据类型的检索控件
+
+/*
+检索项名
+*/
+var toolBarSearch = Ext.create('Ext.toolbar.Toolbar',{
+				
+		items : [
+<%=GetSearchBarItems()%>
+			{
+	        	xtype:'button',
+       			text:'检索',
+       			tooltip: 'Edit',
+       			icon:iconSearch,
+       			handler: search        							
+	        }
+		]
+});
+
+//页面检索处理
+function search()
+{
+	 thisStore.loadPage(1);
+}
+
+/*----------------- 创建Grid的工具条 -----------------*/
+
+//创建工具条
+var toolBarGrid = Ext.create('Ext.toolbar.Toolbar',{
+		items:[
+         		{
+					text:'浏览',
+					icon:iconView,
+					handler : viewGridItem
+         		},
+         		{
+					text:'新建',
+					icon:iconAdd,
+					handler : addGridItem
+         		},
+         		{
+					text:'编辑',
+					icon:iconEdit,
+					handler : editGridItem
+         		},
+         		{
+					text:'删除',
+					icon:iconDelete,
+					handler : deleteGridItem
+         		},
+         		{
+					text:'全部删除',
+					icon:iconDeleteAll,
+					handler : deleteGridAllItem
+         		}
+         	]
+});
+
+//浏览数据
+function viewGridItem()
+{
+	var viewSelModel = listGrid.getSelectionModel(); 
+	if (viewSelModel.hasSelection()) {
+		var selectedViewItem = null;
+		var selected = viewSelModel.getSelection();
+		Ext.each(selected, function (item) {
+   				selectedViewItem = item;
+   			});
+        if(selectedViewItem){
+        	var viewWindow = CreateDetailWindow('浏览',null, selectedViewItem);
+
+        	viewWindow.show();	
+        }
+        else{
+        	Ext.Msg.alert("错误", "没有任何行被选中，无法进行浏览操作！");
+        }  		
+	}
+	else{
+		Ext.Msg.alert("错误", "没有任何行被选中，无法进行浏览操作！");
+	}
+}
+
+
+//新建数据
+function addGridItem()
+{
+	var defaultNewRecord = new  <%=GetPageID()%>.baseModel();
+	var addWindow = CreateDetailWindow('新建','<%=GetAddRequestUrl()%>', defaultNewRecord);	
+	addWindow.show();
+}
+
+//编辑数据
+function editGridItem()
+{
+	var editSelModel = listGrid.getSelectionModel(); 
+	if (editSelModel.hasSelection()) {
+		var selectedEditItem = null;
+		var selected = editSelModel.getSelection();
+		Ext.each(selected, function (item) {
+   				selectedEditItem = item;
+   			});
+        if(selectedEditItem){
+        	var editWindow = CreateDetailWindow('编辑','<%=GetEditRequestUrl()%>', selectedEditItem);
+        	
+        	editWindow.show();
+        	
+        	//editSelModel.clearSelections();	//此处理，防止连续编辑时值没有发生变化问题
+        }
+        else{
+        	Ext.Msg.alert("错误", "没有任何行被选中，无法进行编辑操作！");
+        }	
+	}
+	else{
+		Ext.Msg.alert("错误", "没有任何行被选中，无法进行编辑操作！");
+	}
+}
+
+//删除数据
+function deleteGridItem() { 
+	
+	var selModel = listGrid.getSelectionModel();  
+
+	if (selModel.hasSelection()) 
+	{
+		Ext.Msg.confirm("警告", "确定要删除吗？", 
+			function (button) {
+    			if (button == "yes") 
+    			{
+        			var selected = selModel.getSelection();
+        			var Ids = ''; //要删除的id
+        			Ext.each(selected, function (item) 
+        			{
+        				var deleteID = item.data.<%=GetModelKeyName()%>;
+        				if(deleteID){
+            				Ids = Ids + '"' + deleteID + '",';
+        				}
+        			});
+        			
+        			if(Ids)
+        			{
+        				Ids = Ids.substring(0,Ids.length - 1);
+        				
+        				Ids = '[' +Ids +']';
+        			}
+        			else
+        			{
+        				//Do Nothing
+        			}
+        			
+	        		Ext.Ajax.request(
+	        			{
+	        			 	url:'<%=GetDeleteRequestUrl()%>',
+	        			 	params :{
+	        			 		deleteID:Ids
+	        			 	},
+	        			 	method : 'POST',
+	        			 	// timeout : 2000,//默认30秒 
+	        			 	success : function(response, opts) {
+	        			 		var success = Ext.decode(response.responseText).success;
+	        			 		var message = Ext.decode(response.responseText).message;
+	        			 		 // 当后台数据同步成功时  
+	        			 		  if (success) { 
+	        			 		  	Ext.Array.each(selected, function(record) {
+	        			 		  		thisStore.remove(record);// 页面效果 
+	        			 		  	});
+	        			 		  }
+	        			 		  else{
+			            				Ext.Msg.alert("提示", "处理失败！\r\n" + message);  
+			            		}
+	        			 	},
+	        			 	failure: function () {
+			            		Ext.Msg.alert("提示", "处理失败，请稍后再试！");   
+			            	}
+	        			}
+	        		);
+      				
+			    		}
+			        });
+			    }
+    else {
+        Ext.Msg.alert("错误", "没有任何行被选中，无法进行删除操作！");
+    }
+}
+
+//删除全部数据
+function deleteGridAllItem()
+{
+	Ext.Msg.confirm("警告", "确定要删除全部数据吗？", 
+			function (button) {
+    			if (button == "yes") 
+    			{
+    				Ext.Ajax.request(
+	        			{
+	        			 	url:'<%=GetDeleteAllRequestUrl()%>',
+	        			 	method : 'POST',
+	        			 	// timeout : 2000,//默认30秒 
+	        			 	success : function(response, opts) {
+	        			 		var success = Ext.decode(response.responseText).success;
+	        			 		var message = Ext.decode(response.responseText).message;
+	        			 		 // 当后台数据同步成功时  
+	        			 		  if (success) { 
+	        			 		  	thisStore.removeAll();
+	        			 		  }
+	        			 		  else{
+	        			 		  	 Ext.Msg.alert("提示", "处理失败！\r\n" + message);  
+	        			 		  }
+	        			 	}
+	        			 	,
+	        			 	failure: function () {
+			            		Ext.Msg.alert("提示", "处理失败，请稍后再试！");   
+			            	}
+	        			}
+	        		);
+    			}
+    			else{
+    				//Do Nothing
+    			}
+			})
+}
+
+
+/*创建数据窗口
+title 标题
+okAction 确定/保存 按钮的服务器端处理
+defaultData 默认值
+*/
+function CreateDetailWindow(title,okAction, defaultData)
+{
+	var showForm = Ext.create('Ext.form.Panel',{
+		frame:true,
+		bodyStyle:'padding:5px 5px 0',
+		defaultType: 'textfield',
+		labelAlign:'right',
+		labelWidth: 65, 
+		id: 'formWindow',
+		defaults: {allowBlank: true,width: 280}, 
+		//要修改成对应数据类型的控件，默认都为TextField
+		items:[
+<%=GetDetailWindowItems()%>
+		]	
+	});
+	
+	//设定初始数据
+	if(defaultData){
+<%=GetEditFormDefaultValue()%>
+	}
+	else{
+	}
+	
+	var okButton = Ext.create('Ext.Button', {
+		text: '确定',
+		handler:function(button, e, eOpts ){
+			
+			//验证输入的内容是否合法等，这个是表单的基本操作  
+            if (!showForm.isValid()) {  
+               Ext.Msg.alert("提示","您输入的信息有误,请重新输入...");  
+               return false;  
+           }  
+			
+			//数据取值要对应数据类型
+<%=GetEditFormValue() %>   
+       		
+       		//Ext.MessageBox.wait("载入中...", "提示", {   
+            //   interval: 100       //进度条加载速度   
+            //}); 
+      
+           
+            Ext.Ajax.request({  
+            	url:okAction,
+            	method : 'POST',
+            	params: {  
+<%=GetEditFormPostJsonValue()%> 
+                 		},
+                 		success: function (response, option) {
+                 		
+                  		var success = Ext.decode(response.responseText).success;
+                  		var message = Ext.decode(response.responseText).message;
+                  		
+                  		if (success) {    
+                   		Ext.Msg.alert("提示", "处理成功！");    
+		            	result.destroy(); 
+		            	thisStore.load();
+	            	}
+	            	else{
+	            		Ext.Msg.alert("提示", "处理失败！\r\n" + message);  
+	            	}
+	            },
+	            failure: function () {
+	            	Ext.Msg.alert("提示", "处理失败，请稍后再试！");   
+	            }
+            });
+		
+		}
+	
+	});
+	
+	if(okAction){
+	}
+	else{
+		okButton.setVisible(false);
+	}
+	
+	var result = new Ext.Window({
+		requires: [
+        'Ext.form.*'
+   		],
+		title: title,
+		width:600,
+		layout:'form',
+		modal:true,
+		resizable: false,
+		msgTarget:'under',
+		items:[
+				showForm
+		],
+		buttons:
+		[
+			okButton,
+			{
+				xtype: 'button',
+				text: '关闭',
+				handler: function(){ result.destroy(); }
+			}
+		]
+	
+	});
+	
+	return result;
+}
+
+
+/*----------------- 创建Grid表 -----------------*/
+//1.添加修改显示值的处理
+var listGrid = Ext.create('Ext.grid.Panel',{
+                    store:thisStore,
+                    height:gridHeight,
+                    forceFit: true, //让grid的列自动填满grid的整个宽度，不用一列一列的设定宽度。
+                    autoScroll:true,
+                  	viewConfig: {
+			            emptyText: '没有记录'
+			        },
+                    columns:
+                    [
+<%=GetGridColumnItems()%>
+                    ],
+                    selModel: Ext.create('Ext.selection.CheckboxModel', {}),
+                    dockedItems: [
+                    	{
+						    xtype: 'pagingtoolbar',
+						    store: thisStore,   // same store GridPanel is using
+						    dock: 'bottom',
+						    displayInfo: true
+						}
+					]
+});
+
+// 格式化是否发送显示,这是个 renderer, 渲染器
+function formatOPTEnable(value) {
+	return (value == 1) ? "发送" : "";
+}
+
+/*----------------- 页面初始化处理 -----------------*/
+
+Ext.onReady(function() {
+
+	//创建页面
+	var root = Ext.create('Ext.container.Viewport',{
+		    items: [
+						toolBarSearch,
+		            	toolBarGrid,
+		            	listGrid
+		    		]
+		}
+	);
+	
+	//页面第一次读入数据
+	thisStore.load({
+	    params:{
+	        start:0,
+	        limit: itemsPerPage
+	    }
+	});
+});
+
+  
+  	</script>
+  </body>
+</html>
+
+<script runat="template">
+
+public string GetXMLSetting()
+{
+    return TargetFile.DocumentElement.OuterXml;
+}
+// My methods here.
+public string GetPageTitle()
+{
+    XmlNode root = TargetFile.DocumentElement;
+   
+    XmlNode page = searchXmlChildNode(root,"Page");
+   
+    
+    if(page == null)
+    {
+        return "自动生成的页面名称";
+    }
+    else
+    {
+        return page.Attributes["title"].Value;
+    }
+}
+
+public string GetPageID()
+{
+     XmlNode root = TargetFile.DocumentElement;
+   
+    XmlNode page = searchXmlChildNode(root,"Page");
+   
+    
+    if(page == null)
+    {
+        return "autoPageID";
+    }
+    else
+    {
+        return page.Attributes["id"].Value;
+    }
+}
+
+//{ name: 'dataIdentity' },
+//{ name: 'updatetime' }
+public string GetModelFields()
+{
+    string result = "";
+    XmlNode root = TargetFile.DocumentElement;
+   
+    XmlNode model = searchXmlChildNode(root,"Model");
+    
+    for(int i = 0; i < model.ChildNodes.Count; i++)
+    {
+        XmlNode fieldNode = model.ChildNodes[i];
+        result += "     { name: '" + fieldNode.InnerText + "' }";
+        if((i + 1) == model.ChildNodes.Count)
+        {
+            result += "   //" + fieldNode.Attributes["title"].Value + "\r\n";
+        }
+        else
+        {
+            result += ",   //" + fieldNode.Attributes["title"].Value + "\r\n";
+        }
+    }
+    
+    return result;
+}
+
+//dataIdentity
+public string GetModelKeyName()
+{
+    XmlNode root = TargetFile.DocumentElement;
+   
+    XmlNode model = searchXmlChildNode(root,"Model");
+    
+    for(int i = 0; i < model.ChildNodes.Count; i++)
+    {
+        XmlNode fieldNode = model.ChildNodes[i];
+        
+        XmlAttribute key = fieldNode.Attributes["key"];
+        
+        if(key != null)
+        {
+            if(key.Value.ToString().ToUpper() == "true".ToUpper())
+            {
+                return fieldNode.InnerText;
+            }
+            else
+            {
+                //DO Nothing
+            }
+        }
+        else
+        {
+            //Do Nothing
+        }
+
+    }
+     
+    return "";
+}
+
+public string GetStoreProxyUrl()
+{
+    XmlNode root = TargetFile.DocumentElement;
+   
+    XmlNode store = searchXmlChildNode(root,"Store");
+    
+    return store.Attributes["ProxyUrl"].Value;
+}
+
+//          Ext.apply(store.proxy.extraParams,
+//			{
+//				s_dataName : Ext.getCmp('s_dataName').getValue(),   //备注
+//			    s_dataIdentity : Ext.getCmp('s_dataIdentity').getValue(),  //备注
+//			    s_tableName : Ext.getCmp('s_tableName').getValue()  //备注
+//			}
+//		);
+public string GetStoreProxyExtraParams()
+{
+    string result = "";
+    
+    string inFormat ="				s_{0} : Ext.getCmp('s_{0}').getValue(),   //检索项目：{1}\r\n";
+    string ouFormat = "				s_{0} : Ext.getCmp('s_{0}').getValue()   //检索项目：{1}";
+    
+    ArrayList searchNodeList = GetSearchXmlNodeList();
+    
+    if(searchNodeList.Count >0)
+    {
+        for(int i = 0; i < searchNodeList.Count; i++)
+        {
+            XmlNode fieldNode = (XmlNode)(searchNodeList[i]);
+            if((i+1) == searchNodeList.Count)
+                {
+                    result +=string.Format(ouFormat, fieldNode.InnerText, fieldNode.Attributes["title"].Value);
+                }
+                else
+                {
+                    result +=string.Format(inFormat, fieldNode.InnerText, fieldNode.Attributes["title"].Value);
+                }
+        }
+    }
+    else
+    {
+        //Do Nothing
+    }
+    
+    return result;
+}
+
+//			{
+//				xtype:'textfield',
+//              fieldLabel: '标识:',
+//             	labelAlign:'right',
+//             	id: 's_dataIdentity'
+//			},
+public string GetSearchBarItems()
+{
+    string result = "";
+    
+    string inFormat ="			{\r\n"
+                   + "		        xtype:'textfield',\r\n"
+                   + "              fieldLabel: '{0}:',\r\n"
+                   + "             	labelAlign:'right',\r\n"
+                   + "             	id: 's_{1}'\r\n"
+                   + "			},\r\n";
+    
+    
+    ArrayList searchNodeList = GetSearchXmlNodeList();
+    
+    if(searchNodeList.Count >0)
+    {
+        for(int i = 0; i < searchNodeList.Count; i++)
+        {
+            XmlNode fieldNode = (XmlNode)(searchNodeList[i]);
+            if((i+1) == searchNodeList.Count)
+            {
+                 result +="			{\r\n"
+                   + "		        xtype:'textfield',\r\n"
+                   + "		        fieldLabel: '"+ fieldNode.Attributes["title"].Value +":',\r\n"
+                   + "             	labelAlign:'right',\r\n"
+                   + "             	id: 's_" + fieldNode.InnerText + "'\r\n"
+                   + "			},";
+            }
+            else
+            {
+                 result +="			{\r\n"
+                   + "		        xtype:'textfield',\r\n"
+                   + "		        fieldLabel: '"+ fieldNode.Attributes["title"].Value +":',\r\n"
+                   + "             	labelAlign:'right',\r\n"
+                   + "             	id: 's_" + fieldNode.InnerText + "'\r\n"
+                   + "			},\r\n";
+            }
+        }
+    }
+    
+    return result;
+}
+
+//                    	{
+//                            xtype: 'gridcolumn',
+//                            dataIndex: 'dataIdentity',
+//                            text: '标识',
+//                            width:80
+//                        },
+public string GetGridColumnItems()
+{
+        string result = "";
+    
+    XmlNode root = TargetFile.DocumentElement;
+    XmlNode model = searchXmlChildNode(root,"Model");
+    
+    for(int i = 0; i < model.ChildNodes.Count; i++)
+    {
+        XmlNode fieldNode = model.ChildNodes[i];
+        
+        if((i+1) == model.ChildNodes.Count){
+         result +="                    	{\r\n"
+           + "                            xtype: 'gridcolumn',\r\n"
+           + "                            dataIndex: '" + fieldNode.InnerText +"',\r\n"
+           + "                            text: '"+ fieldNode.Attributes["title"].Value +"',\r\n"
+           + "                            width:80\r\n"
+           + "                        }";
+        }
+        else
+        {
+            result +="                    	{\r\n"
+           + "                            xtype: 'gridcolumn',\r\n"
+           + "                            dataIndex: '" + fieldNode.InnerText +"',\r\n"
+           + "                            text: '"+ fieldNode.Attributes["title"].Value +"',\r\n"
+           + "                            width:80\r\n"
+           + "                        },\r\n";
+        }
+
+    }
+    
+    return result;
+}
+
+//			{
+//				fieldLabel:'标识',
+//				labelAlign:'right',
+//				allowBlank:false,
+//				id:"f_dataIdentity"
+//			},
+public string GetDetailWindowItems()
+{
+    string result = "";
+    
+    XmlNode root = TargetFile.DocumentElement;
+    XmlNode model = searchXmlChildNode(root,"Model");
+    
+    for(int i = 0; i < model.ChildNodes.Count; i++)
+    {
+        XmlNode fieldNode = model.ChildNodes[i];
+        
+        if((i+1) == model.ChildNodes.Count){
+         result +="			{\r\n"
+           + "		        fieldLabel: '"+ fieldNode.Attributes["title"].Value +":',\r\n"
+           + "             	labelAlign:'right',\r\n"
+           + "				allowBlank:false,\r\n"
+           + "             	id: 'f_" + fieldNode.InnerText + "'\r\n"
+           + "			}";
+        }
+        else
+        {
+            result +="			{\r\n"
+           + "		        fieldLabel: '"+ fieldNode.Attributes["title"].Value +":',\r\n"
+           + "             	labelAlign:'right',\r\n"
+           + "				allowBlank:false,\r\n"
+           + "             	id: 'f_" + fieldNode.InnerText + "'\r\n"
+           + "			},\r\n";
+        }
+
+    }
+    
+    return result;
+}
+
+//		showForm.getComponent('f_dataIdentity').setValue(defaultData.get('dataIdentity'));
+//		showForm.getComponent('f_primarycategory').setValue(defaultData.get('primarycategory'));
+//		showForm.getComponent('f_secondarycategory').setValue(defaultData.get('secondarycategory'));
+//		showForm.getComponent('f_dataName').setValue(defaultData.get('dataName'));
+//		showForm.getComponent('f_tableName').setValue(defaultData.get('tableName'));
+//		showForm.getComponent('f_optenable').setValue(defaultData.get('optenable'));
+//		showForm.getComponent('f_opttotalcount').setValue(defaultData.get('opttotalcount'));
+//		showForm.getComponent('f_remark').setValue(defaultData.get('remark'));
+public string GetEditFormDefaultValue()
+{
+     string result = "";
+    
+    XmlNode root = TargetFile.DocumentElement;
+    XmlNode model = searchXmlChildNode(root,"Model");
+    
+    for(int i = 0; i < model.ChildNodes.Count; i++)
+    {
+        XmlNode fieldNode = model.ChildNodes[i];
+        
+        result += "		showForm.getComponent('f_"+fieldNode.InnerText +"').setValue(defaultData.get('"+ fieldNode.InnerText +"'));\r\n";
+    }
+    
+    return result;
+}
+
+//			    var dataIdentity = showForm.getComponent("f_dataIdentity").getValue("");  
+//       		var primarycategory = showForm.getComponent("f_primarycategory").getValue("");  
+//       		var secondarycategory = showForm.getComponent("f_secondarycategory").getValue("");  
+//       		var dataName = showForm.getComponent("f_dataName").getValue("");  
+//       		var tableName = showForm.getComponent("f_tableName").getValue("");  
+//       		var optenable = (showForm.getComponent("f_optenable").getValue(""))?"1":"0";  
+//       		var opttotalcount = showForm.getComponent("f_opttotalcount").getValue("");
+//       		var remark = showForm.getComponent("f_remark").getValue(""); 
+public string GetEditFormValue()
+{
+     string result = "";
+    
+    XmlNode root = TargetFile.DocumentElement;
+    XmlNode model = searchXmlChildNode(root,"Model");
+    
+    for(int i = 0; i < model.ChildNodes.Count; i++)
+    {
+        XmlNode fieldNode = model.ChildNodes[i];
+        
+
+        result += "			var "+fieldNode.InnerText +" = showForm.getComponent(\"f_"+fieldNode.InnerText+"\").getValue(\"\");\r\n";
+    }
+    
+    return result;
+}
+
+//                     		"dataIdentity": dataIdentity,
+//                     		"primarycategory": primarycategory,
+//                     		"secondarycategory": secondarycategory,
+//                     		"dataName": dataName,
+//                     		"tableName": tableName,
+//                     		"optenable": optenable,
+//                     		"opttotalcount": opttotalcount, 
+//                     		"remark": remark 
+public string GetEditFormPostJsonValue()
+{
+     string result = "";
+    
+    XmlNode root = TargetFile.DocumentElement;
+    XmlNode model = searchXmlChildNode(root,"Model");
+    
+    for(int i = 0; i < model.ChildNodes.Count; i++)
+    {
+        XmlNode fieldNode = model.ChildNodes[i];
+        if((i+1) == model.ChildNodes.Count)
+        {
+            result += "                     		\""+ fieldNode.InnerText +"\": " + fieldNode.InnerText ;
+        }
+        else
+        {
+            result += "                     		\""+ fieldNode.InnerText +"\": " + fieldNode.InnerText + ",\r\n";
+        }
+    }
+    
+    return result;
+}
+
+public string GetAddRequestUrl()
+{
+    XmlNode root = TargetFile.DocumentElement;
+   
+    XmlNode store = searchXmlChildNode(root,"Add");
+    
+    return store.Attributes["RequestUrl"].Value;
+}
+
+public string GetEditRequestUrl()
+{
+    XmlNode root = TargetFile.DocumentElement;
+   
+    XmlNode store = searchXmlChildNode(root,"Edit");
+    
+    return store.Attributes["RequestUrl"].Value;
+}
+
+public string GetDeleteRequestUrl()
+{
+    XmlNode root = TargetFile.DocumentElement;
+   
+    XmlNode store = searchXmlChildNode(root,"Delete");
+    
+    return store.Attributes["RequestUrl"].Value;
+}
+
+public string GetDeleteAllRequestUrl()
+{
+    XmlNode root = TargetFile.DocumentElement;
+   
+    XmlNode store = searchXmlChildNode(root,"DeleteAll");
+    
+    return store.Attributes["RequestUrl"].Value;
+}
+
+public XmlNode searchXmlChildNode(XmlNode parentNode, string childNodeName)
+{
+    if(parentNode == null || parentNode.ChildNodes.Count <=0)
+    {
+        return null;
+    }
+    else
+    {
+        //Do Nothing
+    }
+    
+    foreach(XmlNode childNode in parentNode.ChildNodes)
+    {
+        if(childNode.Name == childNodeName)
+        {
+            return childNode;
+        }
+    }
+    
+    return null;
+}
+
+public ArrayList  GetSearchXmlNodeList()
+{
+    ArrayList result = new ArrayList();
+    
+    XmlNode root = TargetFile.DocumentElement;
+    XmlNode model = searchXmlChildNode(root,"Model");
+    
+    for(int i = 0; i < model.ChildNodes.Count; i++)
+    {
+        XmlNode fieldNode = model.ChildNodes[i];
+        
+        XmlAttribute search = fieldNode.Attributes["search"];
+        
+        if(search != null)
+        {
+            if(search.Value.ToString().ToUpper() == "true".ToUpper())
+            {
+                result.Add(fieldNode);
+            }
+            else{}
+        }
+        else{}
+    }
+        
+    return result;
+}
+</script>
+
+

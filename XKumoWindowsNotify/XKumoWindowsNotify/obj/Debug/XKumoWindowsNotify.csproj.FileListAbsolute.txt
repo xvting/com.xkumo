@@ -1,0 +1,16 @@
+E:\KeyData\投资理财\software\XKumoWindowsNotify\XKumoWindowsNotify\bin\Debug\XKumoWindowsNotify.exe
+E:\KeyData\投资理财\software\XKumoWindowsNotify\XKumoWindowsNotify\bin\Debug\XKumoWindowsNotify.pdb
+E:\KeyData\投资理财\software\XKumoWindowsNotify\XKumoWindowsNotify\obj\Debug\XKumoWindowsNotify.csprojResolveAssemblyReference.cache
+E:\KeyData\投资理财\software\XKumoWindowsNotify\XKumoWindowsNotify\obj\Debug\XKumoWindowsNotify.Form1.resources
+E:\KeyData\投资理财\software\XKumoWindowsNotify\XKumoWindowsNotify\obj\Debug\XKumoWindowsNotify.Properties.Resources.resources
+E:\KeyData\投资理财\software\XKumoWindowsNotify\XKumoWindowsNotify\obj\Debug\XKumoWindowsNotify.csproj.GenerateResource.Cache
+E:\KeyData\投资理财\software\XKumoWindowsNotify\XKumoWindowsNotify\obj\Debug\XKumoWindowsNotify.exe
+E:\KeyData\投资理财\software\XKumoWindowsNotify\XKumoWindowsNotify\obj\Debug\XKumoWindowsNotify.pdb
+E:\WHOAMI\投资理财\software\XKumoWindowsNotify\XKumoWindowsNotify\obj\Debug\XKumoWindowsNotify.exe
+E:\WHOAMI\投资理财\software\XKumoWindowsNotify\XKumoWindowsNotify\obj\Debug\XKumoWindowsNotify.pdb
+E:\WHOAMI\投资理财\software\XKumoWindowsNotify\XKumoWindowsNotify\bin\Debug\XKumoWindowsNotify.exe
+E:\WHOAMI\投资理财\software\XKumoWindowsNotify\XKumoWindowsNotify\bin\Debug\XKumoWindowsNotify.pdb
+E:\WHOAMI\投资理财\software\XKumoWindowsNotify\XKumoWindowsNotify\obj\Debug\XKumoWindowsNotify.csprojResolveAssemblyReference.cache
+E:\WHOAMI\投资理财\software\XKumoWindowsNotify\XKumoWindowsNotify\obj\Debug\XKumoWindowsNotify.MainForm.resources
+E:\WHOAMI\投资理财\software\XKumoWindowsNotify\XKumoWindowsNotify\obj\Debug\XKumoWindowsNotify.Properties.Resources.resources
+E:\WHOAMI\投资理财\software\XKumoWindowsNotify\XKumoWindowsNotify\obj\Debug\XKumoWindowsNotify.csproj.GenerateResource.Cache

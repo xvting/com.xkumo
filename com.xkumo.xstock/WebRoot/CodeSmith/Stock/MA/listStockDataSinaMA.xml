@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title='StockDataSinaMA' id='listStockDataSinaMA' />
+	<Model>
+		<field title='序列号' key='true' dataType='int'>seq</field>
+		<field title='股票编号' search='true' dataType='string'>stockcode</field>
+		<field title='股票名称' search='true' dataType='string'>stockname</field>
+		<field title='股票交易所编号' dataType='string'>stockexchangecode</field>
+		<field title='日期' dataType='date'>day</field>
+		<field title='MA5' dataType='float'>ma5</field>
+		<field title='MA10' dataType='float'>ma10</field>
+		<field title='MA30' dataType='float'>ma30</field>
+		<field title='MA60' dataType='float'>ma60</field>
+		<field title='MA120' dataType='float'>ma120</field>
+		<field title='MA240' dataType='float'>ma240</field>
+	</Model>
+	<Store ProxyUrl='listStockDataSinaMA.action'/>
+	<Add RequestUrl='addStockDataSinaMA.action'/>
+	<Edit RequestUrl='updateStockDataSinaMA.action'/>
+	<Delete RequestUrl='deleteStockDataSinaMAForID.action'></Delete>
+	<DeleteAll RequestUrl='deleteStockDataSinaMAAll.action'/>
+</root>

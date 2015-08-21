@@ -1,0 +1,583 @@
+<!-- 
+页面整体说明区域
+
+创建时间：2014/1/3 19:30:44
+生成配置：<root><Page title="测试标题" id="TestPageID" /><Model><field title="主键1" key="true">keyone</field><field title="检索项目2" search="true">SearchTwo</field><field title="检索项目3" search="true">SearchThree</field><field title="检索项目4" search="true">SearchFour</field><field title="备注">Comment</field></Model><Store ProxyUrl="StoreProxyUrl.textAction" /><Add RequestUrl="AddRequestUrl.textAction" /><Edit RequestUrl="EditRequestUrl.textAction" /><Delete RequestUrl="DeleteRequestUrl.textAction"></Delete><DeleteAll RequestUrl="DeleteAllRequestUrl.textAction" /></root>
+ -->
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%> 
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+String extjsPath = "http://"+request.getServerName()+":9091";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>测试标题</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<link rel="stylesheet" href="<%=extjsPath%>/resources/ext-theme-classic/ext-theme-classic-all.css">
+    <script src="<%=extjsPath%>/ext-all.js"></script>
+	<script src="<%=extjsPath%>/locale/ext-lang-zh_CN.js"></script>
+  </head>
+  
+  <body>
+<script type="text/javascript">
+
+/*----------------- 图片资源配置区域 -----------------*/
+var iconSearch = "<%=extjsPath%>/exticons/cog_edit.png";
+var iconView = "<%=extjsPath%>/exticons/application/application_view_detail.png";
+var iconAdd = "<%=extjsPath%>/exticons/arrow/add.png";
+var iconEdit = "<%=extjsPath%>/exticons/application/application_form_edit.png";
+var iconDelete = "<%=extjsPath%>/exticons/delete.png";
+var iconDeleteAll = "<%=extjsPath%>/exticons/table/table_delete.png";
+
+
+/*----------------- 页面变量配置区域 -----------------*/
+var itemsPerPage = 20;			//Grid的每页显示行数
+var gridHeight = 475;	//Grid的高度
+
+
+/*----------------- 定义Model区域 -----------------*/
+//1.要添加Model的idProperty， 如：idProperty : 'dataIdentity'
+//2.要设定数据类型，默认值
+
+/*
+数据字段名
+*/
+Ext.define('TestPageID.baseModel', {
+    extend: 'Ext.data.Model',
+    requires: [
+        'Ext.data.Field'
+    ],
+
+    fields: [
+     { name: 'keyone' },   //主键1
+     { name: 'SearchTwo' },   //检索项目2
+     { name: 'SearchThree' },   //检索项目3
+     { name: 'SearchFour' },   //检索项目4
+     { name: 'Comment' }   //备注
+
+    ],
+   
+    idProperty : 'keyone'
+});
+
+/*----------------- 定义数据Store区域 -----------------*/
+var thisStore = Ext.create('Ext.data.Store', {
+   	model:'TestPageID.baseModel',
+	autoLoad:false,
+	pageSize:itemsPerPage,
+	proxy:{
+		type:'ajax',
+		url:'StoreProxyUrl.textAction',
+		reader:{
+			type:'json',
+			root:'root',
+			totalProperty: 'total'
+		}
+	}
+});
+
+thisStore.on("beforeload",function(store, operation, eOpts)
+	{
+		Ext.apply(store.proxy.extraParams,
+			{
+				s_SearchTwo : Ext.getCmp('s_SearchTwo').getValue(),   //检索项目：检索项目2
+				s_SearchThree : Ext.getCmp('s_SearchThree').getValue(),   //检索项目：检索项目3
+				s_SearchFour : Ext.getCmp('s_SearchFour').getValue()   //检索项目：检索项目4
+			}
+		);
+	}
+
+);
+
+/*----------------- 创建检索工具条 -----------------*/
+//1.需要修改对应数据类型的检索控件
+
+/*
+检索项名
+*/
+var toolBarSearch = Ext.create('Ext.toolbar.Toolbar',{
+				
+		items : [
+			{
+		        xtype:'textfield',
+		        fieldLabel: '检索项目2:',
+             	labelAlign:'right',
+             	id: 's_SearchTwo'
+			},
+			{
+		        xtype:'textfield',
+		        fieldLabel: '检索项目3:',
+             	labelAlign:'right',
+             	id: 's_SearchThree'
+			},
+			{
+		        xtype:'textfield',
+		        fieldLabel: '检索项目4:',
+             	labelAlign:'right',
+             	id: 's_SearchFour'
+			},
+			{
+	        	xtype:'button',
+       			text:'检索',
+       			tooltip: 'Edit',
+       			icon:iconSearch,
+       			handler: search        							
+	        }
+		]
+});
+
+//页面检索处理
+function search()
+{
+	 thisStore.loadPage(1);
+}
+
+/*----------------- 创建Grid的工具条 -----------------*/
+
+//创建工具条
+var toolBarGrid = Ext.create('Ext.toolbar.Toolbar',{
+		items:[
+         		{
+					text:'浏览',
+					icon:iconView,
+					handler : viewGridItem
+         		},
+         		{
+					text:'新建',
+					icon:iconAdd,
+					handler : addGridItem
+         		},
+         		{
+					text:'编辑',
+					icon:iconEdit,
+					handler : editGridItem
+         		},
+         		{
+					text:'删除',
+					icon:iconDelete,
+					handler : deleteGridItem
+         		},
+         		{
+					text:'全部删除',
+					icon:iconDeleteAll,
+					handler : deleteGridAllItem
+         		}
+         	]
+});
+
+//浏览数据
+function viewGridItem()
+{
+	var viewSelModel = listGrid.getSelectionModel(); 
+	if (viewSelModel.hasSelection()) {
+		var selectedViewItem = null;
+		var selected = viewSelModel.getSelection();
+		Ext.each(selected, function (item) {
+   				selectedViewItem = item;
+   			});
+        if(selectedViewItem){
+        	var viewWindow = CreateDetailWindow('浏览',null, selectedViewItem);
+
+        	viewWindow.show();	
+        }
+        else{
+        	Ext.Msg.alert("错误", "没有任何行被选中，无法进行浏览操作！");
+        }  		
+	}
+	else{
+		Ext.Msg.alert("错误", "没有任何行被选中，无法进行浏览操作！");
+	}
+}
+
+
+//新建数据
+function addGridItem()
+{
+	var defaultNewRecord = new  TestPageID.baseModel();
+	var addWindow = CreateDetailWindow('新建','AddRequestUrl.textAction', defaultNewRecord);	
+	addWindow.show();
+}
+
+//编辑数据
+function editGridItem()
+{
+	var editSelModel = listGrid.getSelectionModel(); 
+	if (editSelModel.hasSelection()) {
+		var selectedEditItem = null;
+		var selected = editSelModel.getSelection();
+		Ext.each(selected, function (item) {
+   				selectedEditItem = item;
+   			});
+        if(selectedEditItem){
+        	var editWindow = CreateDetailWindow('编辑','EditRequestUrl.textAction', selectedEditItem);
+        	
+        	editWindow.show();
+        	
+        	//editSelModel.clearSelections();	//此处理，防止连续编辑时值没有发生变化问题
+        }
+        else{
+        	Ext.Msg.alert("错误", "没有任何行被选中，无法进行编辑操作！");
+        }	
+	}
+	else{
+		Ext.Msg.alert("错误", "没有任何行被选中，无法进行编辑操作！");
+	}
+}
+
+//删除数据
+function deleteGridItem() { 
+	
+	var selModel = listGrid.getSelectionModel();  
+
+	if (selModel.hasSelection()) 
+	{
+		Ext.Msg.confirm("警告", "确定要删除吗？", 
+			function (button) {
+    			if (button == "yes") 
+    			{
+        			var selected = selModel.getSelection();
+        			var Ids = ''; //要删除的id
+        			Ext.each(selected, function (item) 
+        			{
+        				var deleteID = item.data.keyone;
+        				if(deleteID){
+            				Ids = Ids + '"' + deleteID + '",';
+        				}
+        			});
+        			
+        			if(Ids)
+        			{
+        				Ids = Ids.substring(0,Ids.length - 1);
+        				
+        				Ids = '[' +Ids +']';
+        			}
+        			else
+        			{
+        				//Do Nothing
+        			}
+        			
+	        		Ext.Ajax.request(
+	        			{
+	        			 	url:'DeleteRequestUrl.textAction',
+	        			 	params :{
+	        			 		deleteID:Ids
+	        			 	},
+	        			 	method : 'POST',
+	        			 	// timeout : 2000,//默认30秒 
+	        			 	success : function(response, opts) {
+	        			 		var success = Ext.decode(response.responseText).success;
+	        			 		var message = Ext.decode(response.responseText).message;
+	        			 		 // 当后台数据同步成功时  
+	        			 		  if (success) { 
+	        			 		  	Ext.Array.each(selected, function(record) {
+	        			 		  		thisStore.remove(record);// 页面效果 
+	        			 		  	});
+	        			 		  }
+	        			 		  else{
+			            				Ext.Msg.alert("提示", "处理失败！\r\n" + message);  
+			            		}
+	        			 	},
+	        			 	failure: function () {
+			            		Ext.Msg.alert("提示", "处理失败，请稍后再试！");   
+			            	}
+	        			}
+	        		);
+      				
+			    		}
+			        });
+			    }
+    else {
+        Ext.Msg.alert("错误", "没有任何行被选中，无法进行删除操作！");
+    }
+}
+
+//删除全部数据
+function deleteGridAllItem()
+{
+	Ext.Msg.confirm("警告", "确定要删除全部数据吗？", 
+			function (button) {
+    			if (button == "yes") 
+    			{
+    				Ext.Ajax.request(
+	        			{
+	        			 	url:'DeleteAllRequestUrl.textAction',
+	        			 	method : 'POST',
+	        			 	// timeout : 2000,//默认30秒 
+	        			 	success : function(response, opts) {
+	        			 		var success = Ext.decode(response.responseText).success;
+	        			 		var message = Ext.decode(response.responseText).message;
+	        			 		 // 当后台数据同步成功时  
+	        			 		  if (success) { 
+	        			 		  	thisStore.removeAll();
+	        			 		  }
+	        			 		  else{
+	        			 		  	 Ext.Msg.alert("提示", "处理失败！\r\n" + message);  
+	        			 		  }
+	        			 	}
+	        			 	,
+	        			 	failure: function () {
+			            		Ext.Msg.alert("提示", "处理失败，请稍后再试！");   
+			            	}
+	        			}
+	        		);
+    			}
+    			else{
+    				//Do Nothing
+    			}
+			})
+}
+
+
+/*创建数据窗口
+title 标题
+okAction 确定/保存 按钮的服务器端处理
+defaultData 默认值
+*/
+function CreateDetailWindow(title,okAction, defaultData)
+{
+	var showForm = Ext.create('Ext.form.Panel',{
+		frame:true,
+		bodyStyle:'padding:5px 5px 0',
+		defaultType: 'textfield',
+		labelAlign:'right',
+		labelWidth: 65, 
+		id: 'formWindow',
+		defaults: {allowBlank: true,width: 280}, 
+		//要修改成对应数据类型的控件，默认都为TextField
+		items:[
+			{
+		        fieldLabel: '主键1:',
+             	labelAlign:'right',
+				allowBlank:false,
+             	id: 'f_keyone'
+			},
+			{
+		        fieldLabel: '检索项目2:',
+             	labelAlign:'right',
+				allowBlank:false,
+             	id: 'f_SearchTwo'
+			},
+			{
+		        fieldLabel: '检索项目3:',
+             	labelAlign:'right',
+				allowBlank:false,
+             	id: 'f_SearchThree'
+			},
+			{
+		        fieldLabel: '检索项目4:',
+             	labelAlign:'right',
+				allowBlank:false,
+             	id: 'f_SearchFour'
+			},
+			{
+		        fieldLabel: '备注:',
+             	labelAlign:'right',
+				allowBlank:false,
+             	id: 'f_Comment'
+			}
+		]	
+	});
+	
+	//设定初始数据
+	if(defaultData){
+		showForm.getComponent('f_keyone').setValue(defaultData.get('keyone'));
+		showForm.getComponent('f_SearchTwo').setValue(defaultData.get('SearchTwo'));
+		showForm.getComponent('f_SearchThree').setValue(defaultData.get('SearchThree'));
+		showForm.getComponent('f_SearchFour').setValue(defaultData.get('SearchFour'));
+		showForm.getComponent('f_Comment').setValue(defaultData.get('Comment'));
+
+	}
+	else{
+	}
+	
+	var okButton = Ext.create('Ext.Button', {
+		text: '确定',
+		handler:function(button, e, eOpts ){
+			
+			//验证输入的内容是否合法等，这个是表单的基本操作  
+            if (!showForm.isValid()) {  
+               Ext.Msg.alert("提示","您输入的信息有误,请重新输入...");  
+               return false;  
+           }  
+			
+			//数据取值要对应数据类型
+			var keyone = showForm.getComponent("f_keyone").getValue("");
+			var SearchTwo = showForm.getComponent("f_SearchTwo").getValue("");
+			var SearchThree = showForm.getComponent("f_SearchThree").getValue("");
+			var SearchFour = showForm.getComponent("f_SearchFour").getValue("");
+			var Comment = showForm.getComponent("f_Comment").getValue("");
+   
+       		
+       		//Ext.MessageBox.wait("载入中...", "提示", {   
+            //   interval: 100       //进度条加载速度   
+            //}); 
+      
+           
+            Ext.Ajax.request({  
+            	url:okAction,
+            	method : 'POST',
+            	params: {  
+                     		"keyone": keyone,
+                     		"SearchTwo": SearchTwo,
+                     		"SearchThree": SearchThree,
+                     		"SearchFour": SearchFour,
+                     		"Comment": Comment 
+                 		},
+                 		success: function (response, option) {
+                 		
+                  		var success = Ext.decode(response.responseText).success;
+                  		var message = Ext.decode(response.responseText).message;
+                  		
+                  		if (success) {    
+                   		Ext.Msg.alert("提示", "处理成功！");    
+		            	result.destroy(); 
+		            	thisStore.load();
+	            	}
+	            	else{
+	            		Ext.Msg.alert("提示", "处理失败！\r\n" + message);  
+	            	}
+	            },
+	            failure: function () {
+	            	Ext.Msg.alert("提示", "处理失败，请稍后再试！");   
+	            }
+            });
+		
+		}
+	
+	});
+	
+	if(okAction){
+	}
+	else{
+		okButton.setVisible(false);
+	}
+	
+	var result = new Ext.Window({
+		requires: [
+        'Ext.form.*'
+   		],
+		title: title,
+		width:600,
+		layout:'form',
+		modal:true,
+		resizable: false,
+		msgTarget:'under',
+		items:[
+				showForm
+		],
+		buttons:
+		[
+			okButton,
+			{
+				xtype: 'button',
+				text: '关闭',
+				handler: function(){ result.destroy(); }
+			}
+		]
+	
+	});
+	
+	return result;
+}
+
+
+/*----------------- 创建Grid表 -----------------*/
+//1.添加修改显示值的处理
+var listGrid = Ext.create('Ext.grid.Panel',{
+                    store:thisStore,
+                    height:gridHeight,
+                    forceFit: true, //让grid的列自动填满grid的整个宽度，不用一列一列的设定宽度。
+                    autoScroll:true,
+                  	viewConfig: {
+			            emptyText: '没有记录'
+			        },
+                    columns:
+                    [
+                    	{
+                            xtype: 'gridcolumn',
+                            dataIndex: 'keyone',
+                            text: '主键1',
+                            width:80
+                        },
+                    	{
+                            xtype: 'gridcolumn',
+                            dataIndex: 'SearchTwo',
+                            text: '检索项目2',
+                            width:80
+                        },
+                    	{
+                            xtype: 'gridcolumn',
+                            dataIndex: 'SearchThree',
+                            text: '检索项目3',
+                            width:80
+                        },
+                    	{
+                            xtype: 'gridcolumn',
+                            dataIndex: 'SearchFour',
+                            text: '检索项目4',
+                            width:80
+                        },
+                    	{
+                            xtype: 'gridcolumn',
+                            dataIndex: 'Comment',
+                            text: '备注',
+                            width:80
+                        }
+                    ],
+                    selModel: Ext.create('Ext.selection.CheckboxModel', {}),
+                    dockedItems: [
+                    	{
+						    xtype: 'pagingtoolbar',
+						    store: thisStore,   // same store GridPanel is using
+						    dock: 'bottom',
+						    displayInfo: true
+						}
+					]
+});
+
+// 格式化是否发送显示,这是个 renderer, 渲染器
+function formatOPTEnable(value) {
+	return (value == 1) ? "发送" : "";
+}
+
+/*----------------- 页面初始化处理 -----------------*/
+
+Ext.onReady(function() {
+
+	//创建页面
+	var root = Ext.create('Ext.container.Viewport',{
+		    items: [
+						toolBarSearch,
+		            	toolBarGrid,
+		            	listGrid
+		    		]
+		}
+	);
+	
+	//页面第一次读入数据
+	thisStore.load({
+	    params:{
+	        start:0,
+	        limit: itemsPerPage
+	    }
+	});
+});
+
+  
+  	</script>
+  </body>
+</html>
+
+
+

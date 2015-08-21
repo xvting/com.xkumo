@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title='TaskLog' id='listTaskLog' />
+	<Model>
+		<field title='序列号' key='true' >logseq</field>
+		<field title='任务ID' search='true' >taskid</field>
+		<field title='任务名称' search='true' >taskname</field>
+		<field title='任务内容' >taskdescription</field>
+		<field title='开始时间' >starttime</field>
+		<field title='结束时间'>endtime</field>
+		<field title='成功'>isdone</field>
+		<field title='消息' >message</field>
+		<field title='详细' >description</field>
+	</Model>
+	<Store ProxyUrl='listTaskLog.action'/>
+	<Add RequestUrl='addTaskLog.action'/>
+	<Edit RequestUrl='updateTaskLog.action'/>
+	<Delete RequestUrl='deleteTaskLogForID.action'></Delete>
+	<DeleteAll RequestUrl='deleteTaskLog.action'/>
+</root>

@@ -1,0 +1,281 @@
+package com.xkumo.xstock.datacollector.service;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.xkumo.util.DateFactory;
+import com.xkumo.xstock.core.data.StockInfo;
+import com.xkumo.xstock.datacollector.system.DBFactory;
+
+/**
+ * 停牌股票相关服务
+ * @author xvting
+ *
+ */
+public class StockSuspensionService {
+	
+	/**
+	 * 指定日期停牌的股票
+	 * @param dayFormatString yyyy-MM-dd
+	 * @return 
+	 * @throws Exception 
+	 */
+	public List<StockInfo> getStockSuspensionList(String dayFormatString) throws Exception
+	{
+		StringBuilder sql = new StringBuilder();
+		sql.append("select * from StockDataSina t where DataDay='"+dayFormatString+"'" + " and TransactionNumber = '0' ");
+
+        List<StockInfo> result = new ArrayList<StockInfo>();
+        
+   	 	Connection connection = null;
+
+        Statement sSta = null;
+  	
+        ResultSet resultSet =null;
+      
+        connection = DBFactory.CreateConnection();
+        
+        try
+	    {
+	        sSta = connection.createStatement();
+	        
+	        resultSet = sSta.executeQuery(sql.toString());
+	        
+	        while (resultSet.next())
+	        {
+	        	StockInfo info = new StockInfo(resultSet.getString("StockCode"), resultSet.getString("StockExchangeCode"));
+	        	
+	        	info.setStockName(resultSet.getString("StockName"));
+	        	
+	        	result.add(info);
+	        }
+	    }finally
+	    {
+	    	try
+	        {
+	            if (connection != null)
+	            {
+	            	connection.close();
+	            }
+	            if (sSta != null)
+	            {
+	            	sSta.close();
+	            }
+	           
+	            if (resultSet != null)
+	            {
+	            	resultSet.close();
+	            }
+	        }
+	        catch (SQLException e)
+	        {
+	            e.printStackTrace();
+	        }
+	    }
+        
+	    return result;
+	}
+	
+	/**
+	 * 判断某股在指定日是否停盘
+	 * @param stockcode
+	 * @param stockexchangeCode
+	 * @param dayFormatString
+	 * @return
+	 * @throws Exception 
+	 */
+	public boolean isSuspension(String stockcode, String stockexchangeCode, String dayFormatString) throws Exception
+	{
+		//判断是否是交易日
+		StockService service = new StockService();
+		
+		if(service.isStockMarketClosed(dayFormatString))
+		{
+			throw new Exception(dayFormatString + "是休市");
+		}
+		else
+		{
+			//Do Nothing
+		}
+		
+		StringBuilder sql = new StringBuilder();
+		sql.append("select * from StockDataSina t where StockCode='"+stockcode+"' and StockExchangeCode='"+stockexchangeCode+"' and DataDay='"+dayFormatString+"'" + " and TransactionNumber = '0' ");
+
+        List<StockInfo> result = new ArrayList<StockInfo>();
+        
+   	 	Connection connection = null;
+
+        Statement sSta = null;
+  	
+        ResultSet resultSet =null;
+      
+        connection = DBFactory.CreateConnection();
+        
+        try
+	    {
+	        sSta = connection.createStatement();
+	        
+	        resultSet = sSta.executeQuery(sql.toString());
+	        
+	        while (resultSet.next())
+	        {
+	        	return true;
+	        }
+	    }finally
+	    {
+	    	try
+	        {
+	            if (connection != null)
+	            {
+	            	connection.close();
+	            }
+	            if (sSta != null)
+	            {
+	            	sSta.close();
+	            }
+	           
+	            if (resultSet != null)
+	            {
+	            	resultSet.close();
+	            }
+	        }
+	        catch (SQLException e)
+	        {
+	            e.printStackTrace();
+	        }
+	    }
+		
+		
+		return false;
+	}
+	
+	/**
+	 * 获得指定股票复牌日前的停牌天数
+	 * @param resumeFirstdayFormatString
+	 * @return
+	 * @throws Exception 
+	 */
+	public int getStockSuspensionDays(String stockcode, String stockexchangecode, String resumeFirstdayFormatString) throws Exception
+	{
+		Date day = DateFactory.ConvertToData(resumeFirstdayFormatString);
+		
+		StockService stockService = new StockService();
+		
+		int result = 0;
+		
+		do
+		{
+			Calendar c = Calendar.getInstance();
+			
+			c.setTime(day); 
+
+			c.add(Calendar.DATE,   -1);
+			
+			String dayBefore=new SimpleDateFormat("yyyy-MM-dd").format(c.getTime()); 
+			
+			day = DateFactory.ConvertToData(dayBefore);
+			
+			boolean isStockClosed = stockService.isStockMarketClosed(DateFactory.ConvertToString(day));
+			
+			if(isStockClosed)
+			{
+				continue;
+			}
+			else
+			{
+				if(isSuspension(stockcode,stockexchangecode , dayBefore))
+				{
+					result++;
+				}
+				else
+				{
+					break;
+				}
+			}
+		}
+		while(true);
+		
+		return result;
+	}
+	
+	/**
+	 * 指定日期为复牌第一交易日的股票
+	 * @param dayFormatString yyyy-MM-dd
+	 * @return 
+	 * @throws Exception 
+	 */
+	public List<StockInfo> getStockResumeTradeDayList(String dayFormatString) throws Exception
+	{
+		StockService service = new StockService();
+		
+		if(service.isStockMarketClosed(dayFormatString))
+		{
+			throw new Exception(dayFormatString + "是休市");
+		}
+		else
+		{
+			//Do Nothing
+		}
+		
+		//获得指定日期交易的股票
+		List<StockInfo> tradeStrockInfo =  service.getStockInfoTradeList(dayFormatString);
+		Map<String , StockInfo> map = new HashMap<String , StockInfo>();
+		for(StockInfo info : tradeStrockInfo)
+		{
+			map.put(info.getStockCode() + info.getStockExchangeCode(), info);
+		}
+		
+		String lastTradeDay = service.getLastStockMarketOpenDay(dayFormatString, 1);
+		
+		//获得上个交易日停牌的股票
+		List<StockInfo> suspendStrockInfoList =  getStockSuspensionList(lastTradeDay);
+		
+		List<StockInfo> result = new ArrayList<StockInfo>();
+		
+		for(StockInfo info: suspendStrockInfoList)
+		{
+			if(map.containsKey(info.getStockCode() + info.getStockExchangeCode()))
+			{
+				result.add(info);
+			}
+			else
+			{
+				//Do Nothing
+			}
+		}
+		
+		return result;
+		
+	}
+	
+	/**
+	 * 指定日期为复牌第n交易日的股票
+	 * @param dayFormatString yyyy-MM-dd
+	 * @return 
+	 */
+	public List<StockInfo> getStockResumeTradeDayNList(String stockcode, String stockexchangecode, String dayFormatString, int days)
+	{
+		return null;
+	}
+	
+	
+	public static void main(String[] args) throws Exception {
+		StockSuspensionService suspensionservice = new StockSuspensionService();
+		
+		int result = suspensionservice.getStockSuspensionDays("600280", "sh", "2015-05-12");
+
+
+		
+		System.out.println(result);
+	}
+	
+}

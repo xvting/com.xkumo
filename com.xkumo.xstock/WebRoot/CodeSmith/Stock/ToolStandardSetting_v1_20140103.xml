@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title='测试标题' id='TestPageID' />
+	<Model>
+		<field title='主键1' key='true'  >keyone</field>
+		<field title='检索项目2' search='true'>SearchTwo</field>
+		<field title='检索项目3' search='true' >SearchThree</field>
+		<field title='检索项目4' search='true'>SearchFour</field>
+		<field title='备注' >Comment</field>
+	</Model>
+	<Store ProxyUrl='StoreProxyUrl.textAction'/>
+	<Add RequestUrl='AddRequestUrl.textAction'/>
+	<Edit RequestUrl='EditRequestUrl.textAction'/>
+	<Delete RequestUrl='DeleteRequestUrl.textAction'></Delete>
+	<DeleteAll RequestUrl='DeleteAllRequestUrl.textAction'/>
+</root>

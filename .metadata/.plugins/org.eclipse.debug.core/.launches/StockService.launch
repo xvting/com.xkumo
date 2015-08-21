@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/com.xkumo.xstock.datacollector/src/com/xkumo/xstock/datacollector/service/StockService.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.xkumo.xstock.datacollector.service.StockService"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.xkumo.xstock.datacollector"/>
+</launchConfiguration>

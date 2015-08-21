@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.3-hudson-390-. --><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservice.xstock.xkumo.com/" targetNamespace="http://webservice.xstock.xkumo.com/" version="1.0">
+
+  <xs:element name="startTask" type="tns:startTask"></xs:element>
+
+  <xs:element name="startTaskResponse" type="tns:startTaskResponse"></xs:element>
+
+  <xs:element name="stopTask" type="tns:stopTask"></xs:element>
+
+  <xs:element name="stopTaskResponse" type="tns:stopTaskResponse"></xs:element>
+
+  <xs:complexType name="stopTask">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="stopTaskResponse">
+    <xs:sequence></xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="startTask">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="startTaskResponse">
+    <xs:sequence></xs:sequence>
+  </xs:complexType>
+</xs:schema>

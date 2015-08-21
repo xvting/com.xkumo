@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="com.xkumo.xstock.weixin"
+  id="myeclipse.1435048112524"
+  context-root="/XWeixin"
+  j2ee-spec="5.0"
+  archive="com.xkumo.xstock.weixin.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

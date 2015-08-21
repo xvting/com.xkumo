@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+ <context-param>
+  <description>Extjs42Location</description>
+  <param-name>Extjs42Location</param-name>
+  <param-value>http://cdn.sencha.com/ext/gpl/4.2.0</param-value>
+ </context-param>
+ <context-param>
+  <description>Extjs50Location</description>
+  <param-name>Extjs50Location</param-name>
+  <param-value>http://cdn.sencha.com/ext/gpl/5.0.1</param-value>
+ </context-param>
+ <context-param>
+  <param-name>ExtTouch211Location</param-name>
+  <param-value>http://cdn.sencha.com/touch/sencha-touch-2.1.1</param-value>
+ </context-param>
+ <filter>
+  <filter-name>struts2</filter-name>
+  <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+ </filter>
+ <filter-mapping>
+  <filter-name>struts2</filter-name>
+  <url-pattern>*.action</url-pattern>
+ </filter-mapping>
+ 
+<!-- 系统启动时的处理 -->
+  <listener>
+      <listener-class>
+      com.xkumo.xstock.application.AppStartupServletContextListener
+      </listener-class>
+  </listener>
+
+  <servlet>
+  	<description>JAX-WS endpoint - WebServiceService</description>
+  	<display-name>WebServiceService</display-name>
+  	<servlet-name>WebServiceService</servlet-name>
+  	<servlet-class>
+  		com.sun.xml.ws.transport.http.servlet.WSServlet
+  	</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>WebServiceService</servlet-name>
+  	<url-pattern>/WebServicePort</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+  <welcome-file>index.jsp</welcome-file>
+ </welcome-file-list>
+ <login-config>
+  <auth-method>BASIC</auth-method>
+ </login-config>
+
+ <listener>
+ 	<listener-class>
+ 		com.sun.xml.ws.transport.http.servlet.WSServletContextListener
+ 	</listener-class>
+ </listener></web-app>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title='数据来源配置' id='list_datasource' />
+	<Model>
+		<field title='系统ID' key='true'  >systemid</field>
+		<field title='系统名称' search='true' >systemname</field>
+		<field title='厂商名称' search='true'>systemvendorname</field>
+		<field title='上传数据描述' >datadescription</field>
+		<field title='备注'>remark</field>
+	</Model>
+	<Store ProxyUrl='listSettingDataSource.action'/>
+	<Add RequestUrl='addDataSource.action'/>
+	<Edit RequestUrl='updateDataSource.action'/>
+	<Delete RequestUrl='delDataSourceForID.action'></Delete>
+	<DeleteAll RequestUrl='delDataSource.action'/>
+</root>

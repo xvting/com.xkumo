@@ -1,0 +1,9 @@
+#Thu May 07 23:33:46 CST 2015
+SERVER_ENABLEMENT=true
+LIBRARY_PATH="C\:\\Users\\xvting\\AppData\\Local\\Genuitec\\Common\\binary\\com.sun.java.jdk.win32.x86_1.6.0.013\\bin;E\:\\tomcat6-7088\\bin"
+eclipse.preferences.version=1
+JDK_HOME=C\:\\Users\\xvting\\AppData\\Local\\Genuitec\\Common\\binary\\com.sun.java.jdk.win32.x86_1.6.0.013
+TOMCAT_BASE=E\:\\tomcat6-7088
+ENDORSED_DIRS="E\:\\tomcat6-7088/common/endorsed"
+TOMCAT_HOME=E\:\\tomcat6-7088
+TOMCAT_TEMP=E\:\\tomcat6-7088\\temp

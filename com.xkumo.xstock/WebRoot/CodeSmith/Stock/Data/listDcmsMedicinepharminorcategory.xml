@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title="药理小分类" id="listDcmsMedicinepharminorcategory"/>
+	<Model>
+		<field title="药理大分类id"  search="true">majorcategoryid</field>
+		<field title="药理小分类id" key="true">minorcategoryid</field>
+		<field title="药理小分类编码" search="true">minorcategorycode</field>
+		<field title="药理小分类名称" search="true">minorcategoryname</field>
+		<field title="备注">remark</field>
+	</Model>
+	<Store ProxyUrl="listDcmsMedicinepharminorcategory.action"/>
+	<Add RequestUrl="addDcmsMedicinepharminorcategory.action"/>
+	<Edit RequestUrl="updateDcmsMedicinepharminorcategory.action"/>
+	<Delete RequestUrl="deleteDcmsMedicinepharminorcategoryForID.action"/>
+	<DeleteAll RequestUrl="deleteDcmsMedicinepharminorcategory.action"/>
+</root>

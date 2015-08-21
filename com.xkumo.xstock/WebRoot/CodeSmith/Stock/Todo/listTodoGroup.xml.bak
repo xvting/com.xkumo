@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title='Todo组' id='listTodoGroup' />
+	<Model>
+		<field title='组ID' key='true' search='true' >todogroupid</field>
+		<field title='组名' search='true' >todogroupname</field>
+		<field title='说明'  >todogroupremark</field>
+	</Model>
+	<Store ProxyUrl='listTodoGroup.action'/>
+	<Add RequestUrl='addTodoGroup.action'/>
+	<Edit RequestUrl='updateTodoGroup.action'/>
+	<Delete RequestUrl='deleteTodoGroupForID.action'></Delete>
+	<DeleteAll RequestUrl='deleteCateGory.action'/>
+</root>

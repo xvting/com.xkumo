@@ -1,0 +1,6 @@
+package com.xkumo.xstocm.rs;
+
+@XmlRootElement
+public class Category {
+
+}

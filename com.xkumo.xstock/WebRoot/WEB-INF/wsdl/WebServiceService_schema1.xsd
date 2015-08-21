@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservice.xstock.xkumo.com/" targetNamespace="http://webservice.xstock.xkumo.com/" version="1.0">
+
+  <xs:element name="startTask" type="tns:startTask"/>
+
+  <xs:element name="startTaskResponse" type="tns:startTaskResponse"/>
+
+  <xs:element name="stopTask" type="tns:stopTask"/>
+
+  <xs:element name="stopTaskResponse" type="tns:stopTaskResponse"/>
+
+  <xs:complexType name="stopTask">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="stopTaskResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="startTask">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="startTaskResponse">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://service.datacollector.xstock.xkumo.com/" targetNamespace="http://service.datacollector.xstock.xkumo.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Exception" type="tns:Exception" />
+  <xs:element name="getData" type="tns:getData" />
+  <xs:element name="getDataResponse" type="tns:getDataResponse" />
+  <xs:complexType name="getData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:sinaDailyStockData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sinaDailyStockData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bottomprice" type="xs:string" />
+      <xs:element minOccurs="0" name="buy1number" type="xs:string" />
+      <xs:element minOccurs="0" name="buy1price" type="xs:string" />
+      <xs:element minOccurs="0" name="buy2number" type="xs:string" />
+      <xs:element minOccurs="0" name="buy2price" type="xs:string" />
+      <xs:element minOccurs="0" name="buy3number" type="xs:string" />
+      <xs:element minOccurs="0" name="buy3price" type="xs:string" />
+      <xs:element minOccurs="0" name="buy4number" type="xs:string" />
+      <xs:element minOccurs="0" name="buy4price" type="xs:string" />
+      <xs:element minOccurs="0" name="buy5number" type="xs:string" />
+      <xs:element minOccurs="0" name="buy5price" type="xs:string" />
+      <xs:element minOccurs="0" name="buyprice" type="xs:string" />
+      <xs:element minOccurs="0" name="content" type="xs:string" />
+      <xs:element minOccurs="0" name="currentprice" type="xs:string" />
+      <xs:element minOccurs="0" name="dataday" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="datatime" type="xs:string" />
+      <xs:element minOccurs="0" name="lastcloseprice" type="xs:string" />
+      <xs:element name="ma10" type="xs:float" />
+      <xs:element name="ma120" type="xs:float" />
+      <xs:element name="ma20" type="xs:float" />
+      <xs:element name="ma240" type="xs:float" />
+      <xs:element name="ma30" type="xs:float" />
+      <xs:element name="ma5" type="xs:float" />
+      <xs:element name="ma60" type="xs:float" />
+      <xs:element minOccurs="0" name="openprice" type="xs:string" />
+      <xs:element minOccurs="0" name="sell1number" type="xs:string" />
+      <xs:element minOccurs="0" name="sell1price" type="xs:string" />
+      <xs:element minOccurs="0" name="sell2number" type="xs:string" />
+      <xs:element minOccurs="0" name="sell2price" type="xs:string" />
+      <xs:element minOccurs="0" name="sell3number" type="xs:string" />
+      <xs:element minOccurs="0" name="sell3price" type="xs:string" />
+      <xs:element minOccurs="0" name="sell4number" type="xs:string" />
+      <xs:element minOccurs="0" name="sell4price" type="xs:string" />
+      <xs:element minOccurs="0" name="sell5number" type="xs:string" />
+      <xs:element minOccurs="0" name="sell5price" type="xs:string" />
+      <xs:element minOccurs="0" name="sellprice" type="xs:string" />
+      <xs:element minOccurs="0" name="stockcode" type="xs:string" />
+      <xs:element minOccurs="0" name="stockexchangecode" type="xs:string" />
+      <xs:element minOccurs="0" name="stockname" type="xs:string" />
+      <xs:element minOccurs="0" name="topprice" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionamount" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionnumber" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

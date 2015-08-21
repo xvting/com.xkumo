@@ -1,0 +1,406 @@
+package com.xkumo.xstock.datacollector.service;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
+import com.xkumo.util.DateFactory;
+import com.xkumo.vendor.IVendor;
+import com.xkumo.vendor.sina.SinaDailyStockData;
+import com.xkumo.vendor.sina.SinaVendor;
+import com.xkumo.xstock.core.data.StockInfo;
+import com.xkumo.xstock.datacollector.system.DBFactory;
+
+public class StockService {
+	
+	public SinaDailyStockData getData(String stockcode, String stockexchangecode) throws Exception
+	{
+		SinaVendor vendor = new SinaVendor();
+		
+		return vendor.getDailyStockData(stockcode, stockexchangecode);
+		
+	}
+	
+	/**
+	 * 指定日期交易的股票
+	 * @param dayFormatString yyyy-MM-dd
+	 * @return 
+	 * @throws Exception 
+	 */
+	public List<StockInfo> getStockInfoTradeList(String dayFormatString) throws Exception
+	{
+		StringBuilder sql = new StringBuilder();
+		sql.append("select * from StockDataSina t where DataDay='"+dayFormatString+"'" + " and TransactionNumber <> '0' ");
+
+        List<StockInfo> result = new ArrayList<StockInfo>();
+        
+   	 	Connection connection = null;
+
+        Statement sSta = null;
+  	
+        ResultSet resultSet =null;
+      
+        connection = DBFactory.CreateConnection();
+        
+        try
+	    {
+	        sSta = connection.createStatement();
+	        
+	        resultSet = sSta.executeQuery(sql.toString());
+	        
+	        while (resultSet.next())
+	        {
+	        	StockInfo info = new StockInfo(resultSet.getString("StockCode"), resultSet.getString("StockExchangeCode"));
+	        	
+	        	info.setStockName(resultSet.getString("StockName"));
+	        	
+	        	result.add(info);
+	        }
+	    }finally
+	    {
+	    	try
+	        {
+	            if (connection != null)
+	            {
+	            	connection.close();
+	            }
+	            if (sSta != null)
+	            {
+	            	sSta.close();
+	            }
+	           
+	            if (resultSet != null)
+	            {
+	            	resultSet.close();
+	            }
+	        }
+	        catch (SQLException e)
+	        {
+	            e.printStackTrace();
+	        }
+	    }
+        
+	    return result;
+	}
+	
+	/**
+	 * 获得所有股票证券
+	 * @return
+	 * @throws SQLException 
+	 * @throws  
+	 */
+	public List<StockInfo> getAllStockInfo() throws Exception
+	{
+		StringBuilder sql = new StringBuilder();
+        sql.append("select * from Stock order by StockExchangeCode, StockCode ");
+
+        List<StockInfo> result = new ArrayList<StockInfo>();
+        
+   	 	Connection connection = null;
+
+        Statement sSta = null;
+  	
+        ResultSet resultSet =null;
+      
+        connection = DBFactory.CreateConnection();
+        
+        try
+	    {
+	        sSta = connection.createStatement();
+	        
+	        resultSet = sSta.executeQuery(sql.toString());
+	        
+	        while (resultSet.next())
+	        {
+	        	StockInfo info = new StockInfo(resultSet.getString("StockCode"), resultSet.getString("StockExchangeCode"));
+	        	
+	        	info.setStockName(resultSet.getString("StockName"));
+	        	
+	        	result.add(info);
+	        }
+	    }finally
+	    {
+	    	try
+	        {
+	            if (connection != null)
+	            {
+	            	connection.close();
+	            }
+	            if (sSta != null)
+	            {
+	            	sSta.close();
+	            }
+	           
+	            if (resultSet != null)
+	            {
+	            	resultSet.close();
+	            }
+	        }
+	        catch (SQLException e)
+	        {
+	            e.printStackTrace();
+	        }
+	    }
+        
+	    return result;
+	}
+	
+	/**
+	 * 指定日期是否是休市日
+	 * @param dayFormatString yyyy-MM-dd
+	 * @return 
+	 * @throws SQLException 
+	 * @throws  
+	 */
+	public boolean isStockMarketClosed(String dayFormatString) throws Exception
+	{
+		
+		StringBuilder sql = new StringBuilder();
+        sql.append("select * from StockDataSina t where StockCode='000001' and StockExchangeCode='sh' and DataDay='"+dayFormatString+"'");
+
+   	 	Connection connection = null;
+
+        Statement sSta = null;
+  	
+        ResultSet resultSet =null;
+      
+        connection = DBFactory.CreateConnection();
+        
+        try
+	    {
+	        sSta = connection.createStatement();
+	        
+	      
+	         resultSet = sSta.executeQuery(sql.toString());
+	        while (resultSet.next())
+	        {
+	        	return false;
+	        }
+	    }finally
+	    {
+	    	try
+	        {
+	            if (connection != null)
+	            {
+	            	connection.close();
+	            }
+	            if (sSta != null)
+	            {
+	            	sSta.close();
+	            }
+	           
+	            if (resultSet != null)
+	            {
+	            	resultSet.close();
+	            }
+	        }
+	        catch (SQLException e)
+	        {
+	            e.printStackTrace();
+	        }
+	    }
+        
+	    return true;
+	}
+	
+	/**
+	 * 指定股票在指定日是否涨停
+	 * @param stockcode
+	 * @param stockexchangecode
+	 * @param dayFormatString
+	 * @return
+	 * @throws SQLException 
+	 * @throws  
+	 */
+	public boolean isClosedAtMaxPrice(String stockcode, String stockexchangecode, String dayFormatString) throws Exception
+	{
+		StringBuilder sql = new StringBuilder();
+		sql.append("select * from StockDataSina t where StockCode='"+stockcode
+				+"' and StockExchangeCode = '"+stockexchangecode
+				+"' and  DataDay='"+dayFormatString+"'");
+
+        List<StockInfo> result = new ArrayList<StockInfo>();
+        
+   	 	Connection connection = null;
+
+        Statement sSta = null;
+  	
+        ResultSet resultSet =null;
+      
+        connection = DBFactory.CreateConnection();
+        
+        try
+	    {
+	        sSta = connection.createStatement();
+	        
+	        resultSet = sSta.executeQuery(sql.toString());
+	        
+	        while (resultSet.next())
+	        {
+	        	if(resultSet.getString("CurrentPrice").equalsIgnoreCase(resultSet.getString("TopPrice"))
+	        			&& resultSet.getString("SellPrice").equalsIgnoreCase("0.00")
+	        	)
+	        	StockInfo info = new StockInfo(resultSet.getString("StockCode"), resultSet.getString("StockExchangeCode"));
+	        	
+	        	info.setStockName(resultSet.getString("StockName"));
+	        	
+	        	result.add(info);
+	        }
+	    }finally
+	    {
+	    	try
+	        {
+	            if (connection != null)
+	            {
+	            	connection.close();
+	            }
+	            if (sSta != null)
+	            {
+	            	sSta.close();
+	            }
+	           
+	            if (resultSet != null)
+	            {
+	            	resultSet.close();
+	            }
+	        }
+	        catch (SQLException e)
+	        {
+	            e.printStackTrace();
+	        }
+	    }
+        
+		return false;
+	}
+	
+	/**
+	 * 获得指定日期前n个的交易日期
+	 * @param dayFormatString
+	 * @return
+	 * @throws Exception 
+	 */
+	public String getLastStockMarketOpenDay(String dayFormatString, int n) throws Exception
+	{
+		Date day = DateFactory.ConvertToData(dayFormatString);
+		
+		
+		do
+		{
+			Calendar c = Calendar.getInstance();
+			
+			c.setTime(day); 
+
+			c.add(Calendar.DATE,   -1);
+			
+			String dayBefore=new SimpleDateFormat("yyyy-MM-dd").format(c.getTime()); 
+			
+			day = DateFactory.ConvertToData(dayBefore);
+			
+			boolean isStockClosed = isStockMarketClosed(DateFactory.ConvertToString(day));
+			
+			if(isStockClosed)
+			{
+				//Do Nothing
+			}
+			else
+			{
+				n--;
+			}
+		}
+		while(n>0);
+		
+		return DateFactory.ConvertToString(day);
+	}
+	
+	/**
+	 * 指定股票在指定日期是否停止交易
+	 * @param dayFormatString yyyy-MM-dd
+	 * @return 
+	 * @throws SQLException 
+	 * @throws  
+	 */
+	public boolean isStockSuspension(String stockcode, String stockexchangecode, String dayFormatString) throws Exception
+	{
+		StringBuilder sql = new StringBuilder();
+        sql.append("select * from StockDataSina t where StockCode='"+stockcode+"' and StockExchangeCode='"+stockexchangecode+"' and DataDay='"+dayFormatString+"'");
+
+   	 	Connection connection = null;
+
+        Statement sSta = null;
+  	
+        ResultSet resultSet =null;
+      
+        connection = DBFactory.CreateConnection();
+        
+        try
+	    {
+	        sSta = connection.createStatement();
+	        
+	      
+	         resultSet = sSta.executeQuery(sql.toString());
+	        while (resultSet.next())
+	        {
+	        	return false;
+	        }
+	    }finally
+	    {
+	    	try
+	        {
+	            if (connection != null)
+	            {
+	            	connection.close();
+	            }
+	            if (sSta != null)
+	            {
+	            	sSta.close();
+	            }
+	           
+	            if (resultSet != null)
+	            {
+	            	resultSet.close();
+	            }
+	        }
+	        catch (SQLException e)
+	        {
+	            e.printStackTrace();
+	        }
+	    }
+        
+	    return true;
+	}
+	
+	public static void main(String[] args) throws Exception {
+		
+		StockService service = new StockService();
+		
+		Date today = new Date();
+	
+		List<StockInfo> result = service.getAllStockInfo();
+		
+		StockSuspensionService suspensionService = new StockSuspensionService();
+		
+		List<StockInfo> resultResume = suspensionService.getStockResumeTradeDayList("2015-05-21");
+		
+		System.out.println("全部" + result.size()+ "恢复交易"+resultResume.size());
+		
+		System.out.println(resultResume.toString());
+		
+		StockSinaService sinaService = new StockSinaService();
+		
+		
+		for(StockInfo info : resultResume)
+		{
+			int sdays = suspensionService.getStockSuspensionDays(info.getStockCode(), info.getStockExchangeCode(), "2015-05-21");
+			System.out.println(info.getStockName() + " " +  info.getStockCode() + "   " + sinaService.getStockSinaURL(info.getStockCode(), info.getStockExchangeCode()) + "   " + sdays);
+		}
+		
+	}
+}

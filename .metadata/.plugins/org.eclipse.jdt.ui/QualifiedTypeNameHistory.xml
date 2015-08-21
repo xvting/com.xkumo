@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.xkumo.vendor.sina.SinaDailyStockData"/>
+<fullyQualifiedTypeName name="com.xkumo.vendor.IVendor"/>
+<fullyQualifiedTypeName name="com.xkumo.vendor.sina.SinaVendor"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.Action"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.datacollector.system.DBFactory"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.datacollector.service.StockSuspensionService"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.system.DBFactory"/>
+<fullyQualifiedTypeName name="com.xkumo.util.DateFactory"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.service.StockService"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.sina.domain.SinaDailyStockDataDo"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.core.data.StockInfo"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.service.StockBonusService"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.weixin.util.SignUtil"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.weixin.message.resp.MusicMessage"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.weixin.message.resp.NewsMessage"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.weixin.util.MessageUtil"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.weixin.service.CoreService"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.weixin.message.resp.TextMessage"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.weixin.util.DBFactory"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.application.App"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.task.TaskManager"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.weixin.webservice.client.WebServiceService"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.core.TaskEnum"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.sina.domain.SinaAG1512DataDo"/>
+<fullyQualifiedTypeName name="com.xkumo.vendor.sina.SinaAG1512Data"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.task.TaskUpdateAG1512DataSina"/>
+<fullyQualifiedTypeName name="com.xkumo.xstock.weixin.ai.AIManager"/>
+</qualifiedTypeNameHistroy>

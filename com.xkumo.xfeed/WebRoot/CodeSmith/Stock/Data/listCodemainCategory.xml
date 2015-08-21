@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title='基础值域码分类' id='listCodemainCategory' />
+	<Model>
+		<field title='分类ID' key='true' search='true' >categoryid</field>
+		<field title='分类名' search='true' >categoryname</field>
+		<field title='说明'  >remark</field>
+	</Model>
+	<Store ProxyUrl='listCateGory.action'/>
+	<Add RequestUrl='addCateGory.action'/>
+	<Edit RequestUrl='updateCateGory.action'/>
+	<Delete RequestUrl='deleteCateGoryForID.action'></Delete>
+	<DeleteAll RequestUrl='deleteCateGory.action'/>
+</root>

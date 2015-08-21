@@ -1,0 +1,1070 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="0" version="2.0">
+<workbenchAdvisor/>
+<window height="728" maximized="true" width="1024" x="100" y="0">
+<fastViewData fastViewLocation="1024">
+<orientation position="512" view="org.maven.ide.eclipse.views.MavenIndexesView"/>
+</fastViewData>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="101" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="com.genuitec.eclipse.j2eedt.core.ejb" itemType="typeToolBarContribution" x="55" y="22"/>
+<coolItem id="com.genuitec.eclipse.uml.actions" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="com.genuitec.eclipse.web20.actionset" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="com.genuitec.eclipse.ws.xfire.actions" itemType="typeToolBarContribution" x="95" y="22"/>
+<coolItem id="com.genuitec.myeclipse.actions.deploytools" itemType="typeToolBarContribution" x="101" y="22"/>
+<coolItem id="com.genuitec.myeclipse.actions.desktop" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="com.genuitec.myeclipse.actions.reporting" itemType="typeToolBarContribution" x="78" y="22"/>
+<coolItem id="com.genuitec.myeclipse.actions.screencapture" itemType="typeToolBarContribution" x="55" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="175" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="101" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="101" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="198" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" itemType="typeToolBarContribution" x="103" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" itemType="typeToolBarContribution" x="103" y="22"/>
+<coolItem id="org.jboss.tools.common.model.ui.editor.EditorPartWrapper" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1431008274170" focus="true" label="Workspace - Java">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
+<part id="20"/>
+<part id="21"/>
+<part id="22"/>
+<part id="23"/>
+<part id="24"/>
+<part id="25"/>
+<part id="26"/>
+<part id="27"/>
+<part id="28"/>
+<part id="29"/>
+<part id="30"/>
+<part id="31"/>
+<part id="32"/>
+<part id="33"/>
+<part id="34"/>
+<part id="35"/>
+<part id="36"/>
+<part id="37"/>
+<part id="38"/>
+<part id="39"/>
+<part id="40"/>
+<part id="41"/>
+<part id="42"/>
+<part id="43"/>
+<part id="44"/>
+<part id="45"/>
+<part id="46"/>
+<part id="47"/>
+<part id="48"/>
+<part id="49"/>
+<part id="50"/>
+<part id="51"/>
+<part id="52"/>
+<part id="53"/>
+<part id="54"/>
+<part id="55"/>
+<part id="56"/>
+<part id="57"/>
+<part id="58"/>
+<part id="59"/>
+<part id="60"/>
+<part id="61"/>
+<part id="62"/>
+<part id="63"/>
+<part id="64"/>
+<part id="65"/>
+<part id="66"/>
+<part id="67"/>
+<part id="68"/>
+<part id="69"/>
+<part id="70"/>
+<part id="71"/>
+<part id="72"/>
+<part id="73"/>
+<part id="74"/>
+<part id="75"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskUpdateStockDataSinaBlock.java" partName="TaskUpdateStockDataSinaBlock.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskUpdateStockDataSinaBlock.java" title="TaskUpdateStockDataSinaBlock.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/task/TaskUpdateStockDataSinaBlock.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskUpdateStockDataSinaBlock.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2169" selectionTopPixel="799"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AppStartupServletContextListener.java" partName="AppStartupServletContextListener.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/application/AppStartupServletContextListener.java" title="AppStartupServletContextListener.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/application/AppStartupServletContextListener.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/application/AppStartupServletContextListener.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1264" selectionTopPixel="357"/>
+</editor>
+<editor id="org.jboss.tools.common.model.ui.editor.EditorPartWrapper" name="web.xml" partName="web.xml" path="E:/KeyData/投资理财/software/com.xkumo.xstock.datacollector/WebRoot/WEB-INF/web.xml" title="web.xml" tooltip="E:/KeyData/投资理财/software/com.xkumo.xstock.datacollector/WebRoot/WEB-INF/web.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" path="/com.xkumo.xstock.datacollector/WebRoot/WEB-INF/web.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockServiceService.java" partName="StockServiceService.java" path="E:/KeyData/投资理财/software/com.xkumo.xstock.datacollector.client.core/src/com/xkumo/xstock/datacollector/client/core/service/StockServiceService.java" title="StockServiceService.java" tooltip="com.xkumo.xstock.datacollector.client.core/src/com/xkumo/xstock/datacollector/client/core/service/StockServiceService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.datacollector.client.core/src/com/xkumo/xstock/datacollector/client/core/service/StockServiceService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="633" selectionTopPixel="306"/>
+</editor>
+<editor id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="StockServiceService.wsdl" partName="StockServiceService.wsdl" path="E:/KeyData/投资理财/software/com.xkumo.xstock.datacollector/WebRoot/WEB-INF/wsdl/StockServiceService.wsdl" title="StockServiceService.wsdl" tooltip="com.xkumo.xstock.datacollector/WebRoot/WEB-INF/wsdl/StockServiceService.wsdl" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.datacollector/WebRoot/WEB-INF/wsdl/StockServiceService.wsdl"/>
+</editor>
+<editor id="com.genuitec.eclipse.struts2.editor" name="struts.xml" partName="struts.xml" path="E:/KeyData/投资理财/software/com.xkumo.xstock/src/struts.xml" title="struts.xml" tooltip="com.xkumo.xstock/src/struts.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/struts.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IndexAction.java" partName="IndexAction.java" path="E:/KeyData/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/index/IndexAction.java" title="IndexAction.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/index/IndexAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/index/IndexAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="399" selectionOffset="275" selectionTopPixel="0"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="index.jsp" partName="index.jsp" path="E:/KeyData/投资理财/software/com.xkumo.xstock/WebRoot/index.jsp" title="index.jsp" tooltip="com.xkumo.xstock/WebRoot/index.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/WebRoot/index.jsp"/>
+</editor>
+<editor id="org.jboss.tools.common.model.ui.editor.EditorPartWrapper" name="web.xml" partName="web.xml" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock/WebRoot/WEB-INF/web.xml" title="web.xml" tooltip="E:/WHOAMI/投资理财/software/com.xkumo.xstock/WebRoot/WEB-INF/web.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" path="/com.xkumo.xstock/WebRoot/WEB-INF/web.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SinaDailyStockData.java" partName="SinaDailyStockData.java" path="E:/KeyData/投资理财/software/com.xkumo.xstock.datacollector.client.core/src/com/xkumo/xstock/datacollector/client/core/service/SinaDailyStockData.java" title="SinaDailyStockData.java" tooltip="com.xkumo.xstock.datacollector.client.core/src/com/xkumo/xstock/datacollector/client/core/service/SinaDailyStockData.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.datacollector.client.core/src/com/xkumo/xstock/datacollector/client/core/service/SinaDailyStockData.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9329" selectionTopPixel="3570"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockAction.java" partName="StockAction.java" path="E:/KeyData/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/stock/action/StockAction.java" title="StockAction.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/stock/action/StockAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/stock/action/StockAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1880" selectionTopPixel="306"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DBFactory.java" partName="DBFactory.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.datacollector/src/com/xkumo/xstock/datacollector/system/DBFactory.java" title="DBFactory.java" tooltip="com.xkumo.xstock.datacollector/src/com/xkumo/xstock/datacollector/system/DBFactory.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.datacollector/src/com/xkumo/xstock/datacollector/system/DBFactory.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="90" selectionOffset="50" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockExchangeService.java" partName="StockExchangeService.java" path="E:/KeyData/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/stock/service/StockExchangeService.java" title="StockExchangeService.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/stock/service/StockExchangeService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/stock/service/StockExchangeService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="837" selectionTopPixel="1081"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockServiceDelegate.java" partName="StockServiceDelegate.java" path="E:/KeyData/投资理财/software/com.xkumo.xstock.datacollector/src/com/xkumo/xstock/datacollector/service/StockServiceDelegate.java" title="StockServiceDelegate.java" tooltip="com.xkumo.xstock.datacollector/src/com/xkumo/xstock/datacollector/service/StockServiceDelegate.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.datacollector/src/com/xkumo/xstock/datacollector/service/StockServiceDelegate.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1249" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockInfo.java" partName="StockInfo.java" path="E:/KeyData/投资理财/software/com.xkumo.xstock.core/src/com/xkumo/xstock/core/data/StockInfo.java" title="StockInfo.java" tooltip="com.xkumo.xstock.core/src/com/xkumo/xstock/core/data/StockInfo.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.core/src/com/xkumo/xstock/core/data/StockInfo.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="254" selectionTopPixel="590"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockSinaService.java" partName="StockSinaService.java" path="E:/KeyData/投资理财/software/com.xkumo.xstock.datacollector/src/com/xkumo/xstock/datacollector/service/StockSinaService.java" title="StockSinaService.java" tooltip="com.xkumo.xstock.datacollector/src/com/xkumo/xstock/datacollector/service/StockSinaService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.datacollector/src/com/xkumo/xstock/datacollector/service/StockSinaService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="275" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockSuspensionService.java" partName="StockSuspensionService.java" path="E:/KeyData/投资理财/software/com.xkumo.xstock.datacollector/src/com/xkumo/xstock/datacollector/service/StockSuspensionService.java" title="StockSuspensionService.java" tooltip="com.xkumo.xstock.datacollector/src/com/xkumo/xstock/datacollector/service/StockSuspensionService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.datacollector/src/com/xkumo/xstock/datacollector/service/StockSuspensionService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="389" selectionOffset="51" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockRecordd.java" partName="StockRecordd.java" path="E:/KeyData/投资理财/software/com.xkumo.xstock.core/src/com/xkumo/xstock/core/data/StockRecordd.java" title="StockRecordd.java" tooltip="com.xkumo.xstock.core/src/com/xkumo/xstock/core/data/StockRecordd.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.core/src/com/xkumo/xstock/core/data/StockRecordd.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="12" selectionOffset="356" selectionTopPixel="68"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockService.java" partName="StockService.java" path="E:/KeyData/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/stock/service/StockService.java" title="StockService.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/stock/service/StockService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/stock/service/StockService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9038" selectionTopPixel="469"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockExchangeAction.java" partName="StockExchangeAction.java" path="E:/KeyData/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/stock/action/StockExchangeAction.java" title="StockExchangeAction.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/stock/action/StockExchangeAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/stock/action/StockExchangeAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="723" selectionTopPixel="306"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockDataSinaService.java" partName="StockDataSinaService.java" path="E:/KeyData/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/sina/service/StockDataSinaService.java" title="StockDataSinaService.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/sina/service/StockDataSinaService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/sina/service/StockDataSinaService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="835" selectionTopPixel="1683"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="pindex.jsp" partName="pindex.jsp" path="E:/KeyData/投资理财/software/com.xkumo.xstock/WebRoot/pindex.jsp" title="pindex.jsp" tooltip="com.xkumo.xstock/WebRoot/pindex.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/WebRoot/pindex.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="listTask.jsp" partName="listTask.jsp" path="E:/KeyData/投资理财/software/com.xkumo.xstock/WebRoot/Jsp/Task/listTask.jsp" title="listTask.jsp" tooltip="com.xkumo.xstock/WebRoot/Jsp/Task/listTask.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/WebRoot/Jsp/Task/listTask.jsp"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskTimerUpdateStockDataSina.java" partName="TaskTimerUpdateStockDataSina.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskTimerUpdateStockDataSina.java" title="TaskTimerUpdateStockDataSina.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/task/TaskTimerUpdateStockDataSina.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskTimerUpdateStockDataSina.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="460" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskUpdateBonusStock.java" partName="TaskUpdateBonusStock.java" path="E:/KeyData/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskUpdateBonusStock.java" title="TaskUpdateBonusStock.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/task/TaskUpdateBonusStock.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskUpdateBonusStock.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5729" selectionTopPixel="3328"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockService.java" partName="StockService.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/service/StockService.java" title="StockService.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/service/StockService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/service/StockService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="12812" selectionTopPixel="8701"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockBonusService.java" partName="StockBonusService.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/service/StockBonusService.java" title="StockBonusService.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/service/StockBonusService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/service/StockBonusService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="17" selectionOffset="291" selectionTopPixel="153"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IVendor.java" partName="IVendor.java" path="E:/KeyData/投资理财/software/com.xkumo.vendor/src/com/xkumo/vendor/IVendor.java" title="IVendor.java" tooltip="com.xkumo.vendor/src/com/xkumo/vendor/IVendor.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.vendor/src/com/xkumo/vendor/IVendor.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="27" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockExchangeInfoShanghai.java" partName="StockExchangeInfoShanghai.java" path="E:/KeyData/投资理财/software/com.xkumo.vendor/src/com/xkumo/vendor/sina/StockExchangeInfoShanghai.java" title="StockExchangeInfoShanghai.java" tooltip="com.xkumo.vendor/src/com/xkumo/vendor/sina/StockExchangeInfoShanghai.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.vendor/src/com/xkumo/vendor/sina/StockExchangeInfoShanghai.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="16" selectionOffset="442" selectionTopPixel="204"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskUpdateStockInfo.java" partName="TaskUpdateStockInfo.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskUpdateStockInfo.java" title="TaskUpdateStockInfo.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/task/TaskUpdateStockInfo.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskUpdateStockInfo.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3395" selectionTopPixel="1927"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="NullPointerException.class" partName="NullPointerException.class" title="NullPointerException.class" tooltip="java.lang.NullPointerException" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=com.xkumo.core/C:\/Users\/xvting\/AppData\/Local\/Genuitec\/Common\/binary\/com.sun.java.jdk.win32.x86_1.6.0.013\/jre\/lib\/rt.jar&lt;java.lang(NullPointerException.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1139" selectionTopPixel="340"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="index.jsp" partName="index.jsp" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/WebRoot/index.jsp" title="index.jsp" tooltip="com.xkumo.xstock.weixin/WebRoot/index.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/WebRoot/index.jsp"/>
+</editor>
+<editor id="org.jboss.tools.common.model.ui.editor.EditorPartWrapper" name="web.xml" partName="web.xml" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/WebRoot/WEB-INF/web.xml" title="web.xml" tooltip="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/WebRoot/WEB-INF/web.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" path="/com.xkumo.xstock.weixin/WebRoot/WEB-INF/web.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TextMessage.java" partName="TextMessage.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/req/TextMessage.java" title="TextMessage.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/req/TextMessage.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/req/TextMessage.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="115" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ImageMessage.java" partName="ImageMessage.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/req/ImageMessage.java" title="ImageMessage.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/req/ImageMessage.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/req/ImageMessage.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="75" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LocationMessage.java" partName="LocationMessage.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/req/LocationMessage.java" title="LocationMessage.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/req/LocationMessage.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/req/LocationMessage.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="663" selectionTopPixel="425"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LinkMessage.java" partName="LinkMessage.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/req/LinkMessage.java" title="LinkMessage.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/req/LinkMessage.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/req/LinkMessage.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="146" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoiceMessage.java" partName="VoiceMessage.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/req/VoiceMessage.java" title="VoiceMessage.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/req/VoiceMessage.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/req/VoiceMessage.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="291" selectionTopPixel="136"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TextMessage.java" partName="TextMessage.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/resp/TextMessage.java" title="TextMessage.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/resp/TextMessage.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/resp/TextMessage.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="177" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MusicMessage.java" partName="MusicMessage.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/resp/MusicMessage.java" title="MusicMessage.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/resp/MusicMessage.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/resp/MusicMessage.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="111" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Music.java" partName="Music.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/resp/Music.java" title="Music.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/resp/Music.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/resp/Music.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="763" selectionTopPixel="456"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NewsMessage.java" partName="NewsMessage.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/resp/NewsMessage.java" title="NewsMessage.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/resp/NewsMessage.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/resp/NewsMessage.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="359" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Article.java" partName="Article.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/resp/Article.java" title="Article.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/resp/Article.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/message/resp/Article.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="794" selectionTopPixel="252"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CoreServlet.java" partName="CoreServlet.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/servlet/CoreServlet.java" title="CoreServlet.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/servlet/CoreServlet.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/servlet/CoreServlet.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2625" selectionTopPixel="1274"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SignUtil.java" partName="SignUtil.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/util/SignUtil.java" title="SignUtil.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/util/SignUtil.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/util/SignUtil.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="43" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CoreService.java" partName="CoreService.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/service/CoreService.java" title="CoreService.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/service/CoreService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/service/CoreService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1804" selectionTopPixel="1546"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockService.java" partName="StockService.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.datacollector/src/com/xkumo/xstock/datacollector/service/StockService.java" title="StockService.java" tooltip="com.xkumo.xstock.datacollector/src/com/xkumo/xstock/datacollector/service/StockService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.datacollector/src/com/xkumo/xstock/datacollector/service/StockService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="9" selectionOffset="626" selectionTopPixel="102"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DBFactory.java" partName="DBFactory.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/util/DBFactory.java" title="DBFactory.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/util/DBFactory.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/util/DBFactory.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="714" selectionTopPixel="40"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WebService.java" partName="WebService.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/webservice/WebService.java" title="WebService.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/webservice/WebService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/webservice/WebService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="8" selectionOffset="303" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="sun-jaxws.xml" partName="sun-jaxws.xml" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock/WebRoot/WEB-INF/sun-jaxws.xml" title="sun-jaxws.xml" tooltip="com.xkumo.xstock/WebRoot/WEB-INF/sun-jaxws.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/WebRoot/WEB-INF/sun-jaxws.xml"/>
+</editor>
+<editor id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="WebServiceService.wsdl" partName="WebServiceService.wsdl" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock/WebRoot/WEB-INF/wsdl/WebServiceService.wsdl" title="WebServiceService.wsdl" tooltip="com.xkumo.xstock/WebRoot/WEB-INF/wsdl/WebServiceService.wsdl" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/WebRoot/WEB-INF/wsdl/WebServiceService.wsdl"/>
+</editor>
+<editor id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" name="WebServiceService_schema1.xsd" partName="WebServiceService_schema1.xsd" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock/WebRoot/WEB-INF/wsdl/WebServiceService_schema1.xsd" title="WebServiceService_schema1.xsd" tooltip="com.xkumo.xstock/WebRoot/WEB-INF/wsdl/WebServiceService_schema1.xsd" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/WebRoot/WEB-INF/wsdl/WebServiceService_schema1.xsd"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WebServiceService.java" partName="WebServiceService.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/webservice/client/WebServiceService.java" title="WebServiceService.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/webservice/client/WebServiceService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/webservice/client/WebServiceService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="950" selectionTopPixel="153"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskManager.java" partName="TaskManager.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskManager.java" title="TaskManager.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/task/TaskManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskManager.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2964" selectionTopPixel="611"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskUpdateStockDataYahooFlag.java" partName="TaskUpdateStockDataYahooFlag.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskUpdateStockDataYahooFlag.java" title="TaskUpdateStockDataYahooFlag.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/task/TaskUpdateStockDataYahooFlag.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskUpdateStockDataYahooFlag.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="569" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskUpdateDataTorrentKittySo.java" partName="TaskUpdateDataTorrentKittySo.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xfeed/src/com/xkumo/xfeed/task/TaskUpdateDataTorrentKittySo.java" title="TaskUpdateDataTorrentKittySo.java" tooltip="com.xkumo.xfeed/src/com/xkumo/xfeed/task/TaskUpdateDataTorrentKittySo.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xfeed/src/com/xkumo/xfeed/task/TaskUpdateDataTorrentKittySo.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4392" selectionTopPixel="2499"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskTorrentKittySoIndex.java" partName="TaskTorrentKittySoIndex.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xfeed/src/com/xkumo/xfeed/task/TaskTorrentKittySoIndex.java" title="TaskTorrentKittySoIndex.java" tooltip="com.xkumo.xfeed/src/com/xkumo/xfeed/task/TaskTorrentKittySoIndex.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xfeed/src/com/xkumo/xfeed/task/TaskTorrentKittySoIndex.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5182" selectionTopPixel="2754"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskLogAction.java" partName="TaskLogAction.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xfeed/src/com/xkumo/xfeed/task/action/TaskLogAction.java" title="TaskLogAction.java" tooltip="com.xkumo.xfeed/src/com/xkumo/xfeed/task/action/TaskLogAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xfeed/src/com/xkumo/xfeed/task/action/TaskLogAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskAction.java" partName="TaskAction.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xfeed/src/com/xkumo/xfeed/task/action/TaskAction.java" title="TaskAction.java" tooltip="com.xkumo.xfeed/src/com/xkumo/xfeed/task/action/TaskAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xfeed/src/com/xkumo/xfeed/task/action/TaskAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="846" selectionTopPixel="51"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskUpdateStockDataSina.java" partName="TaskUpdateStockDataSina.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskUpdateStockDataSina.java" title="TaskUpdateStockDataSina.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/task/TaskUpdateStockDataSina.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskUpdateStockDataSina.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="20275" selectionOffset="719" selectionTopPixel="11542"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskUpdateAG1512DataSina.java" partName="TaskUpdateAG1512DataSina.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskUpdateAG1512DataSina.java" title="TaskUpdateAG1512DataSina.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/task/TaskUpdateAG1512DataSina.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskUpdateAG1512DataSina.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="32" selectionOffset="2013" selectionTopPixel="833"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SinaDailyStockDataDo.java" partName="SinaDailyStockDataDo.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/sina/domain/SinaDailyStockDataDo.java" title="SinaDailyStockDataDo.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/sina/domain/SinaDailyStockDataDo.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/sina/domain/SinaDailyStockDataDo.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="141" selectionOffset="323" selectionTopPixel="51"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SinaDailyStockDataBlockDo.java" partName="SinaDailyStockDataBlockDo.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/sina/domain/SinaDailyStockDataBlockDo.java" title="SinaDailyStockDataBlockDo.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/sina/domain/SinaDailyStockDataBlockDo.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/sina/domain/SinaDailyStockDataBlockDo.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SinaDailyStockData.java" partName="SinaDailyStockData.java" path="E:/WHOAMI/投资理财/software/com.xkumo.vendor/src/com/xkumo/vendor/sina/SinaDailyStockData.java" title="SinaDailyStockData.java" tooltip="com.xkumo.vendor/src/com/xkumo/vendor/sina/SinaDailyStockData.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.vendor/src/com/xkumo/vendor/sina/SinaDailyStockData.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="33" selectionOffset="1325" selectionTopPixel="510"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SinaVendor.java" partName="SinaVendor.java" path="E:/WHOAMI/投资理财/software/com.xkumo.vendor/src/com/xkumo/vendor/sina/SinaVendor.java" title="SinaVendor.java" tooltip="com.xkumo.vendor/src/com/xkumo/vendor/sina/SinaVendor.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.vendor/src/com/xkumo/vendor/sina/SinaVendor.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6758" selectionTopPixel="4029"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskTimerUpdateAG1512DataSina.java" partName="TaskTimerUpdateAG1512DataSina.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskTimerUpdateAG1512DataSina.java" title="TaskTimerUpdateAG1512DataSina.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/task/TaskTimerUpdateAG1512DataSina.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskTimerUpdateAG1512DataSina.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="540" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SinaStockService.java" partName="SinaStockService.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/service/SinaStockService.java" title="SinaStockService.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/service/SinaStockService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/service/SinaStockService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1722" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SinaFutureService.java" partName="SinaFutureService.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/service/SinaFutureService.java" title="SinaFutureService.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/service/SinaFutureService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/service/SinaFutureService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="17" selectionOffset="225" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskEnum.java" partName="TaskEnum.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.core/src/com/xkumo/xstock/core/TaskEnum.java" title="TaskEnum.java" tooltip="com.xkumo.xstock.core/src/com/xkumo/xstock/core/TaskEnum.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.core/src/com/xkumo/xstock/core/TaskEnum.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="5" selectionOffset="273" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AIService.java" partName="AIService.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/ai/AIService.java" title="AIService.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/ai/AIService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/ai/AIService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="110" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AIManager.java" partName="AIManager.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/ai/AIManager.java" title="AIManager.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/ai/AIManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/ai/AIManager.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="9" selectionOffset="52" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TulingAIService.java" partName="TulingAIService.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/ai/TulingAIService.java" title="TulingAIService.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/ai/TulingAIService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/ai/TulingAIService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="40" selectionOffset="1062" selectionTopPixel="102"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MenuUtil.java" partName="MenuUtil.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/util/MenuUtil.java" title="MenuUtil.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/util/MenuUtil.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/util/MenuUtil.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4268" selectionTopPixel="1564"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ActionService.java" partName="ActionService.java" path="E:/WHOAMI/投资理财/software/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/service/ActionService.java" title="ActionService.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/service/ActionService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/service/ActionService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1239" selectionTopPixel="408"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="JSONObject.class" partName="JSONObject.class" title="JSONObject.class" tooltip="org.json.JSONObject" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=com.xkumo.xstock.weixin/WebRoot\/WEB-INF\/lib\/org.json.jar&lt;org.json(JSONObject.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9800" selectionTopPixel="4097"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy"/>
+<view id="org.eclipse.ui.views.ProgressView" partName="Progress"/>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.callhierarchy.view" partName="Call Hierarchy">
+<viewState search_scope_type="1"/>
+</view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState>
+<isTrackingSelection value="false"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.springframework.ide.eclipse.ui.navigator.springExplorer" partName="Spring Explorer"/>
+<view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions">
+<viewState/>
+</view>
+<view id="com.genuitec.javascript.debug.ui.scriptView" partName="JavaScript Scripts Inspector">
+<viewState/>
+</view>
+<view id="com.genuitec.eclipse.ast.deploy.core.serverview" partName="Servers"/>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>&#x0A;<category IMemento.internal.id="Warnings"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
+<viewState group_libraries="1" layout="1" linkWithEditor="0" rootMode="1" workingSetName="">
+<customFilters userDefinedPatternsEnabled="false">
+<xmlDefinedFilters>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.maven.ide.eclipse.MavenModuleFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.maven.ide.eclipse.views.MavenIndexesView" partName="Maven Indexes"/>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
+</views>
+<perspectives activePart="com.genuitec.eclipse.intro.startpage" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspective editorAreaTrimState="1" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.genuitec.myeclipse.perspective.MyEclipsePerspectiveFactory" id="com.genuitec.myeclipse.perspective.myeclipseperspective" label="MyEclipse Java Enterprise"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.test.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.desktop"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.screencapture"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.examples.actionSet"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.hibernatetools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.intro.actionSet"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.webtools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.j2eedt.core.ejb"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.jsftools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.faceletstools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.maven.pro.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.jpatools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.portlet.portletactions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.reporting"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.springtools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.strutstools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.tapestrytools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.restsupport"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.ws.xfire.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.webservices"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.icefaces"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.about.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.product.actions"/>
+<alwaysOnActionSet id="org.eclipse.jst.servlet.ui.internal.actions.ConvertToWebModuleTypeActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.maven.ide.eclipse.ui.navigation"/>
+<alwaysOnActionSet id="org.maven.ide.eclipse.actionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.aop.ui.ActionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.aop.ui.matcher.actionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.beans.ui.actionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.beans.ui.ActionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.beans.search.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.uml.actions"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.uml2.ui.actions"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.profileActionSet"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.web20.actionset"/>
+<show_view_action id="com.genuitec.eclipse.ast.deploy.core.serverview"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="uky.article.imageviewer.views.ImageView"/>
+<show_view_action id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="com.genuitec.eclipse.ui.HTMLView"/>
+<new_wizard_action id="com.genuitec.eclipse.j2eedt.ui.wizard.EJBProjectCreationWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.j2eedt.ui.wizard.NewEARProjectWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.j2eedt.ui.wizard.WebProjectCreationWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.ws.xfire.wizards.NewXFireWebProjectWizard1"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSnippetFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="com.aston.wizards.applet.NewAppletCreationWizard"/>
+<new_wizard_action id="com.aston.wizards.html.NewHtmlCreationWizard"/>
+<new_wizard_action id="com.aston.wizards.jsp.NewJspCreationWizard"/>
+<new_wizard_action id="com.aston.wizards.xhtml.NewXhtmlCreationWizard"/>
+<new_wizard_action id="com.aston.wizards.servlet.NewServletCreationWizard"/>
+<new_wizard_action id="org.jboss.ide.eclipse.jdt.j2ee.ui.wizards.ejb.NewSessionEJBWizard"/>
+<new_wizard_action id="org.jboss.ide.eclipse.jdt.j2ee.ui.wizards.ejb.NewEntityEJBWizard"/>
+<new_wizard_action id="org.jboss.ide.eclipse.jdt.j2ee.ui.wizards.ejb.NewMessageDrivenEJBWizard"/>
+<new_wizard_action id="com.aston.wizards.xml.NewXmlCreationWizard"/>
+<new_wizard_action id="org.eclipse.wst.xml.ui.internal.wizards.NewXMLWizard"/>
+<new_wizard_action id="org.eclipse.wst.xsd.ui.internal.wizards.NewXSDWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.struts.org.easystruts.eclipse.wizards.NewFormCreationWizardX1_1"/>
+<new_wizard_action id="com.genuitec.eclipse.struts.org.easystruts.eclipse.wizards.NewActionCreationWizardX1_1"/>
+<new_wizard_action id="com.genuitec.eclipse.dehory.newformwizard"/>
+<new_wizard_action id="com.genuitec.eclipse.reporting.projectwizard"/>
+<new_wizard_action id="com.genuitec.eclipse.uml.wizard.NewUMLModelFileWizard"/>
+<perspective_action id="com.genuitec.eclipse.dehory.dehoryperspective"/>
+<perspective_action id="com.genuitec.eclipse.hibernate.perspective.HibernatePerspective"/>
+<perspective_action id="com.genuitec.eclipse.imageeditor.perspective"/>
+<perspective_action id="org.eclipse.wst.jsdt.ui.JavaPerspective"/>
+<perspective_action id="com.genuitec.dali.adapter.persistencePerspective"/>
+<perspective_action id="com.genuitec.eclipse.reporting.ReportPerspective"/>
+<perspective_action id="com.genuitec.eclipse.sqlexplorer.perspectives.SQLExplorerPluginPerspective"/>
+<perspective_action id="com.genuitec.eclipse.uml.umlPerspective"/>
+<perspective_action id="com.genuitec.eclipse.web20.perspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<fastViewBars>&#x0A;<fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@98d94" orientation="512" selectedTabId="org.eclipse.ui.views.PropertySheet" style="1">&#x0A;<fastViews>&#x0A;<view id="org.eclipse.ui.views.PropertySheet" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@86506a" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="1">&#x0A;<fastViews>&#x0A;<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="16384" id="topleft" orientation="512" selectedTabId="org.eclipse.jdt.ui.PackageExplorer" style="1">&#x0A;<fastViews>&#x0A;<view id="org.eclipse.jdt.ui.PackageExplorer" ratio="0.3"/>
+<view id="org.eclipse.jdt.ui.TypeHierarchy" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="131072" id="bottom" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="1">&#x0A;<fastViews>&#x0A;<view id="org.eclipse.ui.views.ProblemView" ratio="0.3"/>
+<view id="org.eclipse.ui.views.TaskList" ratio="0.3"/>
+<view id="com.genuitec.eclipse.ui.HTMLView" ratio="0.85"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.29950082"/>
+<view id="com.genuitec.eclipse.ast.deploy.core.serverview" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="16384" id="bottomleft" orientation="256" selectedTabId="uky.article.imageviewer.views.ImageView" style="1">&#x0A;<fastViews>&#x0A;<view id="uky.article.imageviewer.views.ImageView" ratio="0.3"/>
+<view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="cvslocation">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="cvslocation">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.18523985" ratioLeft="251" ratioRight="1104" relationship="2" relative="cvslocation"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@86506a" ratio="0.75" ratioLeft="600" ratioRight="200" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder appearance="2" expanded="0">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@98d94" ratio="0.54859966" ratioLeft="333" ratioRight="274" relationship="4" relative="org.eclipse.ui.internal.ViewStack@86506a">&#x0A;<folder appearance="2" expanded="0">&#x0A;<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="bottom" ratio="0.74958813" ratioLeft="455" ratioRight="152" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder appearance="2" expanded="0">&#x0A;<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="com.genuitec.eclipse.ui.HTMLView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="com.genuitec.eclipse.ast.deploy.core.serverview" label="LabelNotFound"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="topleft" ratio="0.39868203" ratioLeft="242" ratioRight="365" relationship="4" relative="cvslocation">&#x0A;<folder appearance="2" expanded="0">&#x0A;<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="bottomleft" ratio="0.7943144" ratioLeft="475" ratioRight="123" relationship="4" relative="topleft">&#x0A;<folder appearance="2" expanded="0">&#x0A;<page content="uky.article.imageviewer.views.ImageView" label="LabelNotFound"/>
+<page content="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.test.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.desktop"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.screencapture"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.examples.actionSet"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.hibernatetools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.intro.actionSet"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.webtools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.j2eedt.core.ejb"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.jsftools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.faceletstools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.maven.pro.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.jpatools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.portlet.portletactions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.reporting"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.springtools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.strutstools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.tapestrytools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.restsupport"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.ws.xfire.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.webservices"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.icefaces"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.about.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.product.actions"/>
+<alwaysOnActionSet id="org.eclipse.jst.servlet.ui.internal.actions.ConvertToWebModuleTypeActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.maven.ide.eclipse.ui.navigation"/>
+<alwaysOnActionSet id="org.maven.ide.eclipse.actionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.aop.ui.ActionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.aop.ui.matcher.actionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.beans.ui.actionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.beans.ui.ActionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.beans.search.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.profileActionSet"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.web20.actionset"/>
+<alwaysOnActionSet id="fr.obeo.acceleo.gen.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.jdt.ui.SourceView"/>
+<show_view_action id="org.eclipse.jdt.ui.JavadocView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.texteditor.TemplatesView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.springframework.ide.eclipse.aop.ui.navigator.aopReferenceModelNavigator"/>
+<show_view_action id="org.springframework.ide.eclipse.aop.ui.tracing.eventTraceView"/>
+<show_view_action id="org.springframework.ide.eclipse.ui.navigator.springExplorer"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewEnumCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSnippetFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewJavaWorkingSetWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.reporting.projectwizard"/>
+<new_wizard_action id="com.genuitec.eclipse.j2eedt.ui.wizard.EJBProjectCreationWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.j2eedt.ui.wizard.NewEARProjectWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.j2eedt.ui.wizard.WebProjectCreationWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.ws.xfire.wizards.NewXFireWebProjectWizard1"/>
+<new_wizard_action id="org.eclipse.birt.report.designer.ui.ide.wizards.NewReportWizard"/>
+<new_wizard_action id="org.eclipse.birt.report.designer.ui.ide.wizards.NewTemplateWizard"/>
+<new_wizard_action id="org.eclipse.birt.report.designer.ui.wizards.NewLibraryWizard"/>
+<new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
+<perspective_action id="com.genuitec.eclipse.dehory.dehoryperspective"/>
+<perspective_action id="com.genuitec.eclipse.hibernate.perspective.HibernatePerspective"/>
+<perspective_action id="com.genuitec.eclipse.imageeditor.perspective"/>
+<perspective_action id="com.genuitec.dali.adapter.persistencePerspective"/>
+<perspective_action id="com.genuitec.eclipse.reporting.ReportPerspective"/>
+<perspective_action id="com.genuitec.eclipse.sqlexplorer.perspectives.SQLExplorerPluginPerspective"/>
+<perspective_action id="com.genuitec.eclipse.uml.umlPerspective"/>
+<perspective_action id="com.genuitec.myeclipse.perspective.myeclipseperspective"/>
+<perspective_action id="com.genuitec.eclipse.web20.perspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.jdt.ui.JavadocView"/>
+<view id="org.eclipse.jdt.ui.SourceView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.ProgressView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.jdt.callhierarchy.view"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@1e00c5d" orientation="512" selectedTabId="org.springframework.ide.eclipse.ui.navigator.springExplorer" style="0">
+<fastViews>
+<view id="org.springframework.ide.eclipse.ui.navigator.springExplorer" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="131072" id="right" orientation="256" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>
+<mainWindow>
+<info folder="true" part="left">
+<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="Hierarchy"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="left">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.25753012" ratioLeft="342" ratioRight="986" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.7040134" ratioLeft="421" ratioRight="177" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.jdt.callhierarchy.view" label="Call Hierarchy"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="right" ratio="0.74975467" ratioLeft="764" ratioRight="255" relationship="2" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.springframework.ide.eclipse.aop.ui.navigator.aopReferenceModelNavigator" ratio="0.5" ratioLeft="225" ratioRight="225" relationship="4" relative="right"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1e00c5d" ratio="0.5" ratioLeft="225" ratioRight="225" relationship="4" relative="right">
+<folder appearance="2" expanded="2">
+<page content="org.springframework.ide.eclipse.ui.navigator.springExplorer" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="Debug"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.test.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.desktop"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.screencapture"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.examples.actionSet"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.hibernatetools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.intro.actionSet"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.webtools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.j2eedt.core.ejb"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.jsftools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.faceletstools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.maven.pro.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.jpatools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.portlet.portletactions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.reporting"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.springtools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.strutstools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.tapestrytools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.restsupport"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.ws.xfire.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.webservices"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.icefaces"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.about.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.product.actions"/>
+<alwaysOnActionSet id="org.eclipse.jst.servlet.ui.internal.actions.ConvertToWebModuleTypeActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.maven.ide.eclipse.ui.navigation"/>
+<alwaysOnActionSet id="org.maven.ide.eclipse.actionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.aop.ui.ActionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.aop.ui.matcher.actionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.beans.ui.actionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.beans.ui.ActionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.beans.search.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.web20.actionset"/>
+<alwaysOnActionSet id="fr.obeo.acceleo.gen.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.dltk.debug.ui.ScriptDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="com.genuitec.eclipse.ast.deploy.core.serverview"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.datatools.sqltools.result.resultView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.dltk.debug.ui.ScriptDisplayView"/>
+<show_view_action id="org.eclipse.jdt.debug.ui.DisplayView"/>
+<new_wizard_action id="org.eclipse.birt.report.designer.ui.ide.wizards.NewReportWizard"/>
+<new_wizard_action id="org.eclipse.birt.report.designer.ui.ide.wizards.NewTemplateWizard"/>
+<new_wizard_action id="org.eclipse.birt.report.designer.ui.wizards.NewLibraryWizard"/>
+<new_wizard_action id="org.maven.ide.eclipse.wizards.Maven2ProjectWizard"/>
+<perspective_action id="com.genuitec.eclipse.dehory.dehoryperspective"/>
+<perspective_action id="com.genuitec.eclipse.hibernate.perspective.HibernatePerspective"/>
+<perspective_action id="com.genuitec.eclipse.imageeditor.perspective"/>
+<perspective_action id="com.genuitec.dali.adapter.persistencePerspective"/>
+<perspective_action id="com.genuitec.eclipse.sqlexplorer.perspectives.SQLExplorerPluginPerspective"/>
+<perspective_action id="com.genuitec.eclipse.uml.umlPerspective"/>
+<perspective_action id="com.genuitec.myeclipse.perspective.myeclipseperspective"/>
+<perspective_action id="com.genuitec.eclipse.web20.perspective"/>
+<perspective_action id="com.genuitec.eclipse.reporting.ReportPerspective"/>
+<perspective_action id="org.eclipse.datatools.sqltools.sqleditor.perspectives.EditorPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.wst.jsdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.wst.xml.ui.perspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="com.genuitec.javascript.debug.ui.scriptView"/>
+<view id="org.eclipse.jdt.callhierarchy.view"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="com.genuitec.eclipse.ast.deploy.core.serverview"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
+<view id="org.eclipse.debug.ui.ExpressionView"/>
+<fastViews>&#x0A;<view id="org.maven.ide.eclipse.views.MavenIndexesView" ratio="0.3"/>
+</fastViews>
+<fastViewBars>&#x0A;<fastViewBar fastViewLocation="131072" id="org.eclipse.debug.internal.ui.OutlineFolderView" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">&#x0A;<fastViews>&#x0A;<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="com.genuitec.eclipse.ast.deploy.core.serverview" label="Servers"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.dltk.ui.ScriptExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.wst.server.ui.ServersView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.7498122" ratioLeft="998" ratioRight="333" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.6898223" ratioLeft="427" ratioRight="192" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="com.genuitec.javascript.debug.ui.scriptView" label="JavaScript Scripts Inspector"/>
+<page content="org.eclipse.jdt.callhierarchy.view" label="Call Hierarchy"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="org.eclipse.atf.mozilla.ide.ui.views.console" label="LabelNotFound"/>
+<page content="org.eclipse.atf.mozilla.ide.ui.views.xhrmon" label="LabelNotFound"/>
+<page content="org.eclipse.datatools.sqltools.result.resultView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
+<page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.14412417" ratioLeft="65" ratioRight="386" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7498122" ratioLeft="998" ratioRight="333" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<page content="org.eclipse.atf.mozilla.ide.ui.views.inspector" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.49962434" ratioLeft="665" ratioRight="666" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.ExpressionView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
+<page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
+<page content="org.eclipse.atf.mozilla.ide.debug.ui.scriptview" label="LabelNotFound"/>
+<page content="org.eclipse.dltk.debug.ui.ScriptDisplayView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory/>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@1e00c5d"/>
+<trimItem IMemento.internal.id="right"/>
+</trimArea>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="JSONObject.class" tooltip="org.json.JSONObject">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=com.xkumo.xstock.weixin/WebRoot\/WEB-INF\/lib\/org.json.jar&lt;org.json(JSONObject.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ReturnCodeUtil.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/util/ReturnCodeUtil.java">
+<persistable path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/util/ReturnCodeUtil.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ActionService.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/service/ActionService.java">
+<persistable path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/service/ActionService.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MenuUtil.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/util/MenuUtil.java">
+<persistable path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/util/MenuUtil.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TulingAIService.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/ai/TulingAIService.java">
+<persistable path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/ai/TulingAIService.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AIManager.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/ai/AIManager.java">
+<persistable path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/ai/AIManager.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AIService.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/ai/AIService.java">
+<persistable path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/ai/AIService.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskEnum.java" tooltip="com.xkumo.xstock.core/src/com/xkumo/xstock/core/TaskEnum.java">
+<persistable path="/com.xkumo.xstock.core/src/com/xkumo/xstock/core/TaskEnum.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SinaFutureService.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/service/SinaFutureService.java">
+<persistable path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/service/SinaFutureService.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SinaStockService.java" tooltip="com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/service/SinaStockService.java">
+<persistable path="/com.xkumo.xstock.weixin/src/com/xkumo/xstock/weixin/service/SinaStockService.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskTimerUpdateAG1512DataSina.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/task/TaskTimerUpdateAG1512DataSina.java">
+<persistable path="/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskTimerUpdateAG1512DataSina.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TaskTimerUpdateStockInfo.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/task/TaskTimerUpdateStockInfo.java">
+<persistable path="/com.xkumo.xstock/src/com/xkumo/xstock/task/TaskTimerUpdateStockInfo.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SinaAG1512DataDo.java" tooltip="com.xkumo.xstock/src/com/xkumo/xstock/sina/domain/SinaAG1512DataDo.java">
+<persistable path="/com.xkumo.xstock/src/com/xkumo/xstock/sina/domain/SinaAG1512DataDo.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SinaVendor.java" tooltip="com.xkumo.vendor/src/com/xkumo/vendor/sina/SinaVendor.java">
+<persistable path="/com.xkumo.vendor/src/com/xkumo/vendor/sina/SinaVendor.java"/>
+</file>
+</mruList>
+</workbench>

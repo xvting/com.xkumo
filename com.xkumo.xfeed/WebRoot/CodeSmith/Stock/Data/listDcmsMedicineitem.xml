@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title="药品编码" id="listDcmsMedicineitem"/>
+	<Model>
+		<field title="序号" key="true">uuid</field>
+		<field title="药理小分类id">minorcategoryid</field>
+		<field title="通用名称" search="true">name</field>
+		<field title="通用编码" search="true">code</field>
+		<field title="江苏编码">jscode</field>
+		<field title="次要药理分类码">pharmacoextcategoryid</field>
+		<field title="拼音码">pinyingcode</field>
+		<field title="五笔码">wubicode</field>
+		<field title="说明">remark</field>
+	</Model>
+	<Store ProxyUrl="listDcmsMedicineitem.action"/>
+	<Add RequestUrl="addDcmsMedicineitem.action"/>
+	<Edit RequestUrl="updateDcmsMedicineitem.action"/>
+	<Delete RequestUrl="deleteDcmsMedicineitemForID.action"/>
+	<DeleteAll RequestUrl="deleteDcmsMedicineitem.action"/>
+</root>

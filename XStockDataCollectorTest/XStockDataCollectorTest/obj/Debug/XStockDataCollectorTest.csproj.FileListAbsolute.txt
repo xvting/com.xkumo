@@ -1,0 +1,9 @@
+E:\KeyData\投资理财\software\XStockDataCollectorTest\XStockDataCollectorTest\bin\Debug\XStockDataCollectorTest.exe.config
+E:\KeyData\投资理财\software\XStockDataCollectorTest\XStockDataCollectorTest\bin\Debug\XStockDataCollectorTest.exe
+E:\KeyData\投资理财\software\XStockDataCollectorTest\XStockDataCollectorTest\bin\Debug\XStockDataCollectorTest.pdb
+E:\KeyData\投资理财\software\XStockDataCollectorTest\XStockDataCollectorTest\obj\Debug\XStockDataCollectorTest.csprojResolveAssemblyReference.cache
+E:\KeyData\投资理财\software\XStockDataCollectorTest\XStockDataCollectorTest\obj\Debug\XStockDataCollectorTest.Form1.resources
+E:\KeyData\投资理财\software\XStockDataCollectorTest\XStockDataCollectorTest\obj\Debug\XStockDataCollectorTest.Properties.Resources.resources
+E:\KeyData\投资理财\software\XStockDataCollectorTest\XStockDataCollectorTest\obj\Debug\XStockDataCollectorTest.csproj.GenerateResource.Cache
+E:\KeyData\投资理财\software\XStockDataCollectorTest\XStockDataCollectorTest\obj\Debug\XStockDataCollectorTest.exe
+E:\KeyData\投资理财\software\XStockDataCollectorTest\XStockDataCollectorTest\obj\Debug\XStockDataCollectorTest.pdb

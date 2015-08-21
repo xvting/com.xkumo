@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="webServiceWizard">
+		<item value="false" key="WSDL_FILE_USED"/>
+		<list key="WSDL_FILE_KEY">
+			<item value="E:\KeyData\投资理财\software\com.xkumo.xstock.datacollector\WebRoot\WEB-INF\wsdl\StockServiceService.wsdl"/>
+		</list>
+		<list key="WSDL_URL_KEY">
+			<item value="http://www.xkumo.com:8080/XStockSystem/WebServicePort?wsdl"/>
+			<item value="http://localhost:7088/XStockSystem/WebServicePort?wsdl"/>
+		</list>
+	</section>
+</section>

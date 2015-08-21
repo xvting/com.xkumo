@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title='前置机首页' id='pageindex' />
+	<Model>
+		<field title='标识' key='true'  >uuid</field>
+		<field title='操作时间' search='true' >operateTime</field>
+		<field title='操作名称' search='true'>operateName</field>
+		<field title='操作细节' >operateDesp</field>
+		<field title='备注'>reMark</field>
+	</Model>
+	<Store ProxyUrl='listTimeTaskPageLog.action'/>
+	<Add RequestUrl='AddRequestUrl.textAction'/>
+	<Edit RequestUrl='EditRequestUrl.textAction'/>
+	<Delete RequestUrl='deleteTimeTaskForUUID.action'></Delete>
+	<DeleteAll RequestUrl='deleteTimeTask.action'/>
+</root>

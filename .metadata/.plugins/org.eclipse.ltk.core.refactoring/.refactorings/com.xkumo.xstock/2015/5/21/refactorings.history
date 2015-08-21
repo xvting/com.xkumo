@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 1 elements(s) to &apos;com.xkumo.xstock.datacollector/src/com.xkumo.xstock.datacollector.service&apos;&#x0D;&#x0A;- Original project: &apos;com.xkumo.xstock&apos;&#x0D;&#x0A;- Destination element: &apos;com.xkumo.xstock.datacollector/src/com.xkumo.xstock.datacollector.service&apos;&#x0D;&#x0A;- Original element: &apos;com.xkumo.xstock.system.DBFactory.java&apos;" description="Copy compilation unit" destination="=com.xkumo.xstock.datacollector/src&lt;com.xkumo.xstock.datacollector.service" element1="/src&lt;com.xkumo.xstock.system{DBFactory.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1432025668385" units="1" version="1.0"/>
+</session>

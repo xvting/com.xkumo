@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="com.xkumo.xfeed"
+  id="myeclipse.1401863723073"
+  context-root="/XFeedSystem"
+  j2ee-spec="5.0"
+  archive="com.xkumo.xfeed.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

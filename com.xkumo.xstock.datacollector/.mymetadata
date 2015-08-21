@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="com.xkumo.xstock.datacollector"
+  id="myeclipse.1431009344235"
+  context-root="/XStockDataCollector"
+  j2ee-spec="5.0"
+  archive="com.xkumo.xstock.datacollector.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

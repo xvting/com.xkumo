@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title='基础值域码数据' id='listCodemainValue' />
+	<Model>
+		<field title='流水号' key='true' >uuid</field>
+		<field title='所属值域ID' search='true'  key='true' >itemid</field>
+		<field title='名称' search='true' >code</field>
+		<field title='编码' search='true' >codename</field>
+		<field title='参数1'  >param1</field>
+		<field title='参数2'  >param2</field>
+		<field title='参数3'  >param3</field>
+		<field title='参数4'  >param4</field>
+		<field title='参数5'  >param5</field>
+		<field title='说明'  >remark</field>
+	</Model>
+	<Store ProxyUrl='listMainValue.action'/>
+	<Add RequestUrl='addMainValue.action'/>
+	<Edit RequestUrl='updateMainValue.action'/>
+	<Delete RequestUrl='deleteMainValueForID.action'></Delete>
+	<DeleteAll RequestUrl='deleteMainValue.action'/>
+</root>

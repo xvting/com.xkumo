@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Page title='StockDataYahoo' id='listStockDataYahoo' />
+	<Model>
+		<field title='序列号' key='true' dataType='int'>yahooseq</field>
+		<field title='股票编号' search='true' dataType='string'>stockcode</field>
+		<field title='股票名称' search='true' dataType='string'>stockname</field>
+		<field title='股票交易所编号' dataType='string'>stockexchangecode</field>
+		<field title='数据日期' search='true' dataType='string'>date</field>
+		<field title='开盘价' dataType='string'>open</field>
+		<field title='最高价' dataType='string'>high</field>
+		<field title='最低价' dataType='string'>low</field>
+		<field title='收盘价' dataType='string'>close</field>
+		<field title='交易量' dataType='string'>volumn</field>
+		<field title='调整收盘价' dataType='string'>adjclose</field>
+	</Model>
+	<Store ProxyUrl='listStockDataYahoo.action'/>
+	<Add RequestUrl='addStockDataYahoo.action'/>
+	<Edit RequestUrl='updateStockDataYahoo.action'/>
+	<Delete RequestUrl='deleteStockDataYahooForID.action'></Delete>
+	<DeleteAll RequestUrl='deleteStockDataYahoo.action'/>
+</root>

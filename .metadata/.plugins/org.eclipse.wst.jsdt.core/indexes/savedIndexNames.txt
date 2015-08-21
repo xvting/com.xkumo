@@ -1,0 +1,6 @@
+INDEX VERSION 1.121+E:\WHOAMI\投资理财\software\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2782388552.index
+3903744196.index
+1924362759.index
+1392430524.index
+3098268003.index
